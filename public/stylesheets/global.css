@@ -140,20 +140,38 @@ nav ul a:hover{
 /* Home
 ---------------------------------------- */
 .instructions{
+	-moz-box-shadow: 1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;
+	-webkit-box-shadow:  1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;;
+	box-shadow: 1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;
+	background-color:#FFF;
 	margin-bottom: 29px;
     overflow: hidden;
 }
 .price{
+	-moz-border-radius:0 8px 8px 0; -webkit-border-radius:0 8px 8px 0; border-radius:0 8px 8px 0;
 	background-color:#FFF;
-	float: right;
-    height: 35px;
-    padding: 12px 0;
+    float: left;
+    height: 60px;
+    overflow: hidden;
     width: 315px;
 }
+.price a{
+	display: block;
+	float: right;
+	font-size: 1.3em;
+	font-weight: bold;
+	height: 38px;
+	line-height: 38px;
+	margin: 11px 20px 0 0;
+	outline: medium none;
+	text-align: center;
+	width: 85px;
+}
 .price dl{
-	background:#ff0097;
-	height: 78px;
-    margin: 10px 9px;
+	-moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;
+	background:#FF0097;
+    height: 45px;
+    margin: 7px 9px;
     width: 292px;
 }
 
@@ -161,7 +179,6 @@ nav ul a:hover{
 	-moz-box-shadow: 1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;
 	-webkit-box-shadow:  1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;;
 	box-shadow: 1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;
-	
 	background-color: #FFF;
     border: 10px solid #FFF;
     margin: 0 auto;
@@ -174,7 +191,7 @@ nav ul a:hover{
 	height: 60px;
 	width: 660px;
 }
-.steps h2{
+.steps h3{
 	color: #C3C3C3;
     float: left;
     font-size: 1em;
@@ -253,12 +270,12 @@ nav ul a:hover{
 #highlight_masturbators{background:#FFF url('../images/misc/highlight_masturbators.png') no-repeat top left;}
 #highlight_monthly{background:#FFF url('../images/misc/highlight_monthly.png') no-repeat top left;}
 
-#highlights .highlight_category h2{
+#highlights .highlight_category h3{
 	margin:195px 15px 15px 15px;
 	text-transform:uppercase;
 }
 
-#highlights .highlight_category h2 a{
+#highlights .highlight_category h3 a{
 	color:#000;
 }
 
@@ -271,26 +288,71 @@ nav ul a:hover{
 footer{
 	background:#242524 url("../images/backgrounds/bg-footer.png") repeat-x left top;
 	border-top: 2px solid #00B9FF;
-	height:120px;
+	color:#FFF;
+	height:210px;
+	overflow:hidden;
 	padding-top: 19px;
 }
-footer nav {
+footer .content .floatleft{}
+footer .content .floatleft.last{
+	margin: 8px 0 8px 8px;
+	margin-right:0;
+}
+footer form{
+	width: 270px;
+}
+footer form fieldset:first-Child{
+	margin-bottom:20px;
+}
+footer input.text, 
+footer textarea.textarea {
+    -moz-box-sizing: border-box;
+  	box-sizing: border-box;
+	-moz-transition: all 0.3s ease-out 0s;  /* FF4+ */
+	-o-transition: all 0.3s ease-out 0s;  /* Opera 10.5+ */
+	-webkit-transition: all 0.3s ease-out 0s;  /* Saf3.2+, Chrome */
+	-ms-transition: all 0.3s ease-out 0s;  /* IE10? */
+	transition: all 0.3s ease-out 0s;
+    -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;
+	-moz-box-shadow:1px 2px 4px rgba(0, 0, 0, 0.2) inset;
+	-webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2) inset;
+	background-color:#FFF;
+    border: 0 none;
+    color: #333;
 	float:left;
+    outline: medium none;
+    padding: 6px;
+    resize: none;
+    width: 100%;
+}
+footer input.text:focus, 
+footer textarea.textarea:focus {
+	-moz-box-shadow:2px 3px 4px rgba(0, 0, 0, 0.4) inset;
+	-webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4) inset;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4) inset;
+}
+footer label{
+	color:#FFF;
+	display:block;
+	margin-bottom:10px;
 }
 footer nav li{
-	border-left: 1px solid #FFF;
-    border-right: 1px solid #CCC;
-    margin-bottom: 67px;
-    padding:0 15px 0;
+	margin-bottom: 25px;
 }
 nav li:first-Child{	
 	border-left:0 none;
+	padding-left: 0;
 }
 nav li:last-Child{
 	border-right:0 none;
 	padding-right:0;
 }
-
+.navigation{
+	float:left;
+	width:388px;
+}
+footer nav{float:left;}
 footer nav ul a{
 	color:#FFF;
 	font-size:12px;
@@ -298,10 +360,9 @@ footer nav ul a{
 	text-shadow:1px 1px rgba(60, 60, 60, 0.9);
 	text-decoration:none;
 }
-
-footer .social-icons{
-	float:right;
-	width:112px;
+footer .social-icons{float:left;}
+footer .textarea{
+	height:100px;
 }
 #copyright span{
 	margin:0 10px 0;
@@ -363,10 +424,10 @@ footer .social-icons{
 .social-icons a{
 	background:url("../images/icons/icn-social-pages.png") no-repeat;
 	display:inline-block;
-	height:27px;
+	height:44px;
 	margin-right:10px;
 	text-indent:-9000px;
-	width:27px;
+	width:44px;
 }
 .social-icons a.facebook{background-position:left;}
 .social-icons a.twitter{background-position:center;}
