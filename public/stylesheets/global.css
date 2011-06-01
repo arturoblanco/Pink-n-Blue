@@ -104,11 +104,16 @@ header #logo{
 ---------------------------------------- */
 header nav{overflow:hidden;}
 header nav ul{
-	border-top: 1px solid #434343;
+	border-top: 1px solid rgba(0,0,0,0.2);
 	float:right;
 	padding-top: 11px;
 }
-header nav ul li{margin-right: 50px;}
+header nav ul li{
+	border-right: 1px solid rgba(0, 0, 0, 0.2);
+    height: 21px;
+    line-height: 20px;
+	padding: 0 12px;
+}
 ul.horz li:last-Child{margin-right:0;}
 header nav ul a{
 	color:#FFF;
@@ -134,6 +139,24 @@ nav ul a:hover{
 }
 /* Home
 ---------------------------------------- */
+.instructions{
+	margin-bottom: 29px;
+    overflow: hidden;
+}
+.price{
+	background-color:#FFF;
+	float: right;
+    height: 35px;
+    padding: 12px 0;
+    width: 315px;
+}
+.price dl{
+	background:#ff0097;
+	height: 78px;
+    margin: 10px 9px;
+    width: 292px;
+}
+
 .slide{
 	-moz-box-shadow: 1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;
 	-webkit-box-shadow:  1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;;
@@ -147,8 +170,9 @@ nav ul a:hover{
 .steps{
 	-moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px;
 	background:#212121 url("../images/backgrounds/bg_title.gif") no-repeat left center;
+	float:left;
 	height: 60px;
-	width: 667px;
+	width: 660px;
 }
 .steps h2{
 	color: #C3C3C3;
@@ -187,7 +211,7 @@ nav ul a:hover{
 	text-transform: capitalize;
 }
 #copyright{
-	border-top: 1px solid #004159;
+    border-top: 1px solid rgba(0, 185, 191, 0.4);	
 	clear: both;
 	color: #7B7B7B;
 	font-size:10px;
@@ -245,7 +269,7 @@ nav ul a:hover{
 /* Footer
 ============================================================ */
 footer{
-	background-color: #000;
+	background:#242524 url("../images/backgrounds/bg-footer.png") repeat-x left top;
 	border-top: 2px solid #00B9FF;
 	height:120px;
 	padding-top: 19px;
@@ -259,11 +283,12 @@ footer nav li{
     margin-bottom: 67px;
     padding:0 15px 0;
 }
-footer nav li:first-Child{	
+nav li:first-Child{	
 	border-left:0 none;
 }
-footer nav li:last-Child{
+nav li:last-Child{
 	border-right:0 none;
+	padding-right:0;
 }
 
 footer nav ul a{
@@ -286,7 +311,8 @@ footer .social-icons{
 ============================================================ */
 .search_form{position:relative;}
 .search_form .search{
-	bottom: 30px;
+	border: 1px solid #00B9FF;
+	bottom: 15px;
 	position: absolute;
 	right: 0;
 }
