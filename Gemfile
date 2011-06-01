@@ -14,6 +14,12 @@ gem 'uglifier'
 
 gem 'jquery-rails'
 
+group :test, :development do
+  gem "rspec-rails", "~> 2.6"
+  gem 'factory_girl_rails'
+end
+
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
