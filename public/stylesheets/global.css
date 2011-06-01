@@ -92,18 +92,22 @@ ul.horz li{float:left;list-style-type: none;}
 /* Header
 ============================================================ */
 header{
-	background:#242524 url("../images/backgrounds/bg_header.gif") repeat-x left top;
+	background:#242524 url("../images/backgrounds/bg-footer.png") repeat-x left top;
     border-top:2px solid #FF0097;
     height:103px;
 	margin-bottom: 15px;
 }
 header #logo{
-	height:70px;
+	height:60px;
 }
 /* Navigation
 ---------------------------------------- */
 header nav{overflow:hidden;}
-header nav ul{float:right;}
+header nav ul{
+	border-top: 1px solid #434343;
+	float:right;
+	padding-top: 11px;
+}
 header nav ul li{margin-right: 50px;}
 ul.horz li:last-Child{margin-right:0;}
 header nav ul a{
@@ -131,12 +135,17 @@ nav ul a:hover{
 /* Home
 ---------------------------------------- */
 .slide{
+	-moz-box-shadow: 1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;
+	-webkit-box-shadow:  1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;;
+	box-shadow: 1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;
+	
 	background-color: #FFF;
-    border: 15px solid #FFF;
+    border: 10px solid #FFF;
     margin: 0 auto;
     width: 945px;
 }
 .steps{
+	-moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px;
 	background:#212121 url("../images/backgrounds/bg_title.gif") no-repeat left center;
 	height: 60px;
 	width: 667px;
@@ -170,17 +179,18 @@ nav ul a:hover{
 .steps li.step-link{
 	border-bottom: 1px dotted #888;
     float: left;
-    margin: 24px 20px;
+    margin: 24px 12px;
 }
 .steps li.step-link a{
-	 color: #888;
-	 text-transform: capitalize;
+	color: #888;
+	text-decoration:none;
+	text-transform: capitalize;
 }
 #copyright{
 	border-top: 1px solid #004159;
 	clear: both;
 	color: #7B7B7B;
-	font-size:9px;
+	font-size:10px;
 	padding: 11px 0;
 }
 
@@ -242,9 +252,20 @@ footer{
 }
 footer nav {
 	float:left;
-    width: 200px;
 }
-footer nav li{margin-bottom:10px;}
+footer nav li{
+	border-left: 1px solid #FFF;
+    border-right: 1px solid #CCC;
+    margin-bottom: 67px;
+    padding:0 15px 0;
+}
+footer nav li:first-Child{	
+	border-left:0 none;
+}
+footer nav li:last-Child{
+	border-right:0 none;
+}
+
 footer nav ul a{
 	color:#FFF;
 	font-size:12px;
