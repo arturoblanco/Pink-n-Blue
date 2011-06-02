@@ -80,7 +80,12 @@ a{
 }
 
 a:hover{
-	
+	 -moz-transition: all 0.3s ease-out;  /* FF4+ */
+	      -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
+	 -webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
+	     -ms-transition: all 0.3s ease-out;  /* IE10? */
+	         transition: all 0.3s ease-out;
+
 }
 /* Lists
 ---------------------------------------- */
@@ -126,11 +131,6 @@ header nav ul a{
 }
 nav ul a:hover{
 	color: #DE318F;
-	 -moz-transition: all 0.3s ease-out;  /* FF4+ */
-       -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
-  -webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
-      -ms-transition: all 0.3s ease-out;  /* IE10? */
-          transition: all 0.3s ease-out;
 }
 /* Content
 ============================================================ */
@@ -140,8 +140,9 @@ nav ul a:hover{
 /* Home
 ---------------------------------------- */
 .instructions{
+	-moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px;
 	-moz-box-shadow: 1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;
-	-webkit-box-shadow:  1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;;
+	-webkit-box-shadow:  1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;
 	box-shadow: 1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;
 	background-color:#FFF;
 	margin-bottom: 29px;
@@ -153,24 +154,58 @@ nav ul a:hover{
     float: left;
     height: 60px;
     overflow: hidden;
-    width: 315px;
 }
 .price a{
-	display: block;
-	float: right;
-	font-size: 1.3em;
-	font-weight: bold;
-	height: 38px;
-	line-height: 38px;
-	margin: 11px 20px 0 0;
-	outline: medium none;
-	text-align: center;
-	width: 85px;
+	-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;
+	-moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.2) inset;
+	-webkit-box-shadow:  1px 1px 3px  rgba(0,0,0,0.2) inset;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.2) inset;
+    background-color: #FFF;
+    bottom: 48px;
+    color: #C20374;
+    display: block;
+    float: right;
+    font-size: 1.4em;
+    font-weight: bold;
+    height: 38px;
+    line-height: 35px;
+    position: relative;
+    right: 21px;
+    text-align: center;
+    text-decoration: none;
+    width: 95px;
+}
+.price a:hover{
+	-moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.4) inset;
+	-webkit-box-shadow:  1px 1px 3px  rgba(0,0,0,0.4) inset;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.4) inset;
+	color:#7b044a;
+	
+}
+.price dl dt {
+    float: left;
+    margin: 6px 0 0 6px;
+    width: 70px;
+}
+.price dl dd {
+    float: left;
+    font-size: 2.2em;
+    font-weight: bold;
+    margin: 6px 0 0 6px;
+    width: 106px;
+}
+.price dd span {
+    font-size: 0.5em;
+    left: 1px;
+    position: relative;
+    top: 4px;
+    vertical-align: super;
 }
 .price dl{
 	-moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;
-	background:#FF0097;
-    height: 45px;
+	background-color:#DE0686;
+    color: #FFF;
+	height: 45px;
     margin: 7px 9px;
     width: 292px;
 }
@@ -205,11 +240,11 @@ nav ul a:hover{
 	margin-right: 10px;
 }
 .steps li.step-number{
-	background: url("../images/misc/step.gif") left top;
+	background: url("../images/misc/step.png") no-repeat center;
 	border: 0 none;
 	color: #FFF;
 	font-size: 1.6em;
-	height: 23px;
+	height: 24px;
 	line-height: 23px;
 	margin: 19px 0 0 2px;
 	overflow: hidden;
@@ -293,7 +328,7 @@ footer{
 	overflow:hidden;
 	padding-top: 19px;
 }
-footer .content .floatleft{}
+footer .content .floatleft.middle{margin: 0 126px;}
 footer .content .floatleft.last{
 	margin: 8px 0 8px 8px;
 	margin-right:0;
