@@ -15,12 +15,14 @@
         <header id="header">
           <div class="wrapper">
             <h1 id="logo"><a href="index.html"><img src="../images/misc/header_logo.png" alt="pink-n-blue logo" /></a></h1>
-            <form action="search.php" method="post" class="search_form">
-              <div class="search">
-                <input type="text" maxlength="255" class="text" placeholder="search...">
-                <button class="submit_search" type="submit">pesquisa</button>
-              </div>
-            </form>
+            <div class="search-content">
+							<form action="search.php" method="post" class="search_form">
+	              <div class="search">
+	                <input type="text" maxlength="255" class="text" placeholder="search...">
+	                <button class="submit_search" type="submit">pesquisa</button>
+	              </div>
+	            </form>
+						</div>
             <nav>
               <ul class="horz">
                 <li><a href="index.html">Inicio</a></li>
@@ -36,7 +38,7 @@
           <div class="wrapper">
             <div class="instructions">
               <div class="steps">
-                <h2>seu carrinho de compras</h2>
+                <h3>seu carrinho de compras</h3>
                 <ul class="horz">
                   <li class="step-number">3</li>
                   <li class="step-link"><a href="javascript:void(0);">articles</a></li>
@@ -47,7 +49,7 @@
               <div class="price">
                 <dl>
                   <dt>Seu pedido <span>R$</span></dt>
-                  <dd class="price">750<span>.25</span></dd>
+                  <dd>750<span>.25</span></dd>
                 </dl>
                 <a href="javascript:void(0);">Pay</a>
               </div><!-- .price END -->
@@ -58,32 +60,34 @@
             <div id="highlights">
 
               <div class="highlight_category first" id="highlight_masturbators">
-                <h2><a href="#">masturbators</a></h2>
+                <h3><a href="#">masturbators</a></h3>
                 <p>O kit contém um estimulante vibrador massageador multi-velocidade com 4 capas de silicone com textura intercambiáveis.</p>
               </div>
 
               <div class="highlight_category" id="highlight_capas_extensores">
-                <h2><a href="#">Capas y extensores</a></h2>
+                <h3><a href="#">Capas y extensores</a></h3>
                 <p>O kit contém um estimulante vibrador massageador multi-velocidade com 4 capas de silicone com textura intercambiáveis.</p>
               </div>
 
-              <div class="highlight_category full" id="highlight_offer">
-                <h2><a href="#">Luxury Items</a></h2>
+              <div class="highlight_category" id="highlight_offer">
+                <span>20%</span>
+								<h3><a href="#">Luxury Items</a></h3>
                 <p>Productos seleccionados - válido del 1 de Sep.al 30 de Sep. de 2010.</p>
               </div>
 
               <div class="highlight_category first" id="highlight_body_lotions">
-                <h2><a href="#">erotic body lotions</a></h2>
+                <h3><a href="#">erotic body lotions</a></h3>
                 <p>O kit contém um estimulante vibrador massageador multi-velocidade com 4 capas de silicone com textura intercambiáveis.</p>
               </div>
 
               <div class="highlight_category" id="highlight_luxury">
-                <h2><a href="#">Capas y extensores</a></h2>
+                <h3><a href="#">Capas y extensores</a></h3>
                 <p>O kit contém um estimulante vibrador massageador multi-velocidade com 4 capas de silicone com textura intercambiáveis.</p>
               </div>
 
               <div class="highlight_category full" id="highlight_monthly">
-                <h2><a href="#">Producto del mes</a></h2>
+								
+                <h3><a href="#">Producto del mes</a></h3>
                 <p>Man's Grease - $20.50</p>
               </div>
 
@@ -94,22 +98,50 @@
         <footer id="footer">
           <div class="wrapper">
             <div class="content">
-              <nav>
-                <ul class="horz">
-                  <li><a href="index.html">Inicio</a></li>
-                  <li><a href="produtos.html">Produtos</a></li>
-                  <li><a href="comprar.html">Como Comprar</a></li>
-                  <li><a href="faq.html">dúvidas frequentes</a></li>
-                </ul>
-              </nav>
-              <ul class="horz social-icons">
-                <li><a class="facebook" href="javascript:void(0);">Facebook</a></li>
-                <li><a class="twitter" href="javascript:void(0);">twitter</a></li>
-                <li><a class="orkut" href="javascript:void(0);">orkut</a></li>
-              </ul>
-            </div>
-            <div class="clearboth" id="copyright">Copyright &copy; 2010 Pink n' Blue., All rights reserved.<span>|</span>Términos y condiciones</div>
-          </div>
+							<div class="floatleft">
+								<h2>NAVEGAÇÃO<h2>
+	              <nav>
+	                <ul>
+	                  <li><a href="index.html">Inicio</a></li>
+	                  <li><a href="produtos.html">Produtos</a></li>
+	                  <li><a href="comprar.html">Como Comprar</a></li>
+	                  <li><a href="faq.html">dúvidas frequentes</a></li>
+	                </ul>
+	              </nav>
+	            </div>
+							<div class="floatleft middle">	
+								<h2>SIGA-NOS<h2>
+								<ul class="social-icons">
+	                <li><a class="facebook" href="javascript:void(0);">Facebook</a></li>
+	                <li><a class="twitter" href="javascript:void(0);">twitter</a></li>
+	                <li><a class="orkut" href="javascript:void(0);">orkut</a></li>
+	              </ul>
+							</div>
+							<div class="floatleft">
+								<h2>CONTATO-NOS<h2>
+								<form method="" action="">
+									<fieldset>
+										<label>Name<em>*</em></label>
+		                <input type="text" maxlength="" class="text">
+									</fieldset>
+									<fieldset>
+										<label>Mail<em>*</em></label>
+		                <input type="text" maxlength="" class="text">
+									</fieldset>
+								</form>
+							</div>
+							<div class="floatleft last">
+								<form method="" action="">
+									<fieldset>
+										<label>Comment<em>*</em></label>
+		                <textarea class="textarea"></textArea>
+									</fieldset>
+								</form>
+							</div>	
+          	</div>	<!-- .content END -->
+            <div class="clearboth" id="copyright">Copyright &copy; 2010 Pink n' Blue., All rights reserved.<span>|</span>Términos y 	condiciones 
+						</div>
+          </div>	<!-- .wrapper END -->
         </footer>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>

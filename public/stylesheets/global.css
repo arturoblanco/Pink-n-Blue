@@ -80,7 +80,12 @@ a{
 }
 
 a:hover{
-	
+	 -moz-transition: all 0.3s ease-out;  /* FF4+ */
+	      -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
+	 -webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
+	     -ms-transition: all 0.3s ease-out;  /* IE10? */
+	         transition: all 0.3s ease-out;
+
 }
 /* Lists
 ---------------------------------------- */
@@ -104,11 +109,16 @@ header #logo{
 ---------------------------------------- */
 header nav{overflow:hidden;}
 header nav ul{
-	border-top: 1px solid #434343;
+	border-top: 1px solid rgba(0,0,0,0.2);
 	float:right;
 	padding-top: 11px;
 }
-header nav ul li{margin-right: 50px;}
+header nav ul li{
+	border-right: 1px solid rgba(0, 0, 0, 0.2);
+    height: 21px;
+    line-height: 20px;
+	padding: 0 12px;
+}
 ul.horz li:last-Child{margin-right:0;}
 header nav ul a{
 	color:#FFF;
@@ -121,11 +131,6 @@ header nav ul a{
 }
 nav ul a:hover{
 	color: #DE318F;
-	 -moz-transition: all 0.3s ease-out;  /* FF4+ */
-       -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
-  -webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
-      -ms-transition: all 0.3s ease-out;  /* IE10? */
-          transition: all 0.3s ease-out;
 }
 /* Content
 ============================================================ */
@@ -134,11 +139,81 @@ nav ul a:hover{
 }
 /* Home
 ---------------------------------------- */
+.instructions{
+	-moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px;
+	-moz-box-shadow: 1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;
+	-webkit-box-shadow:  1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;
+	box-shadow: 1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;
+	background-color:#FFF;
+	margin-bottom: 29px;
+    overflow: hidden;
+}
+.price{
+	-moz-border-radius:0 8px 8px 0; -webkit-border-radius:0 8px 8px 0; border-radius:0 8px 8px 0;
+	background-color:#FFF;
+    float: left;
+    height: 60px;
+    overflow: hidden;
+}
+.price a{
+	-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;
+	-moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.2) inset;
+	-webkit-box-shadow:  1px 1px 3px  rgba(0,0,0,0.2) inset;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.2) inset;
+    background-color: #FFF;
+    bottom: 48px;
+    color: #C20374;
+    display: block;
+    float: right;
+    font-size: 1.4em;
+    font-weight: bold;
+    height: 38px;
+    line-height: 35px;
+    position: relative;
+    right: 21px;
+    text-align: center;
+    text-decoration: none;
+    width: 95px;
+}
+.price a:hover{
+	-moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.4) inset;
+	-webkit-box-shadow:  1px 1px 3px  rgba(0,0,0,0.4) inset;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.4) inset;
+	color:#7b044a;
+	
+}
+.price dl dt {
+    float: left;
+    margin: 6px 0 0 6px;
+    width: 70px;
+}
+.price dl dd {
+    float: left;
+    font-size: 2.2em;
+    font-weight: bold;
+    margin: 6px 0 0 6px;
+    width: 106px;
+}
+.price dd span {
+    font-size: 0.5em;
+    left: 1px;
+    position: relative;
+    top: 4px;
+    vertical-align: super;
+}
+.price dl{
+	-moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;
+	background-color:#DE0686;
+    color: #FFF;
+	height: 45px;
+    margin: 7px 9px;
+    width: 292px;
+}
+
 .slide{
 	-moz-box-shadow: 1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;
 	-webkit-box-shadow:  1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;;
 	box-shadow: 1px 1px 3px #B9B9B9, 1px 1px 3px #B9B9B9;
-	
 	background-color: #FFF;
     border: 10px solid #FFF;
     margin: 0 auto;
@@ -147,10 +222,11 @@ nav ul a:hover{
 .steps{
 	-moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px;
 	background:#212121 url("../images/backgrounds/bg_title.gif") no-repeat left center;
+	float:left;
 	height: 60px;
-	width: 667px;
+	width: 660px;
 }
-.steps h2{
+.steps h3{
 	color: #C3C3C3;
     float: left;
     font-size: 1em;
@@ -164,11 +240,11 @@ nav ul a:hover{
 	margin-right: 10px;
 }
 .steps li.step-number{
-	background: url("../images/misc/step.gif") left top;
+	background: url("../images/misc/step.png") no-repeat center;
 	border: 0 none;
 	color: #FFF;
 	font-size: 1.6em;
-	height: 23px;
+	height: 24px;
 	line-height: 23px;
 	margin: 19px 0 0 2px;
 	overflow: hidden;
@@ -187,7 +263,7 @@ nav ul a:hover{
 	text-transform: capitalize;
 }
 #copyright{
-	border-top: 1px solid #004159;
+    border-top: 1px solid rgba(0, 185, 191, 0.4);	
 	clear: both;
 	color: #7B7B7B;
 	font-size:10px;
@@ -228,14 +304,39 @@ nav ul a:hover{
 #highlight_offer{background:#FFF url('../images/misc/highlight_offer.png') no-repeat top left;}
 #highlight_masturbators{background:#FFF url('../images/misc/highlight_masturbators.png') no-repeat top left;}
 #highlight_monthly{background:#FFF url('../images/misc/highlight_monthly.png') no-repeat top left;}
-
-#highlights .highlight_category h2{
+#highlight_offer h3{
+    margin: 170px 0 0 10px;
+    text-align: center;
+}
+#highlight_offer p{
+	color:#FFF;
+	text-align:center;
+	text-shadow:0px 1px 1px #FFF;
+}
+#highlight_offer span{
+    color: #FFF;
+    font-size: 90px;
+    font-weight: bold;
+	left:94px;
+    position: relative;
+    text-shadow:4px 1px 9px rgba(0, 0, 0, 0.8);
+    top: 155px;
+}
+#highlight_offer h3 a{
+    color: #FFF;
+    font-size: 35px;
+    font-weight: bold;
+    text-shadow:4px 1px 9px rgba(0, 0, 0, 0.8);
+}
+.highlight_category h3{
 	margin:195px 15px 15px 15px;
 	text-transform:uppercase;
 }
 
-#highlights .highlight_category h2 a{
-	color:#000;
+.highlight_category h3 a{
+	color: #000;
+    font-size: 15px;
+    text-decoration: none;
 }
 
 #highlights .highlight_category p{
@@ -245,27 +346,73 @@ nav ul a:hover{
 /* Footer
 ============================================================ */
 footer{
-	background-color: #000;
+	background:#242524 url("../images/backgrounds/bg-footer.png") repeat-x left top;
 	border-top: 2px solid #00B9FF;
-	height:120px;
+	color:#FFF;
+	height:210px;
+	overflow:hidden;
 	padding-top: 19px;
 }
-footer nav {
+footer .content .floatleft.middle{margin: 0 126px;}
+footer .content .floatleft.last{
+	margin: 8px 0 8px 8px;
+	margin-right:0;
+}
+footer form{
+	width: 270px;
+}
+footer form fieldset:first-Child{
+	margin-bottom:20px;
+}
+footer input.text, 
+footer textarea.textarea {
+    -moz-box-sizing: border-box;
+  	box-sizing: border-box;
+	-moz-transition: all 0.3s ease-out 0s;  /* FF4+ */
+	-o-transition: all 0.3s ease-out 0s;  /* Opera 10.5+ */
+	-webkit-transition: all 0.3s ease-out 0s;  /* Saf3.2+, Chrome */
+	-ms-transition: all 0.3s ease-out 0s;  /* IE10? */
+	transition: all 0.3s ease-out 0s;
+    -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;
+	-moz-box-shadow:1px 2px 4px rgba(0, 0, 0, 0.2) inset;
+	-webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2) inset;
+	background-color:#FFF;
+    border: 0 none;
+    color: #333;
 	float:left;
+    outline: medium none;
+    padding: 6px;
+    resize: none;
+    width: 100%;
+}
+footer input.text:focus, 
+footer textarea.textarea:focus {
+	-moz-box-shadow:2px 3px 4px rgba(0, 0, 0, 0.4) inset;
+	-webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4) inset;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4) inset;
+}
+footer label{
+	color:#FFF;
+	display:block;
+	margin-bottom:10px;
 }
 footer nav li{
-	border-left: 1px solid #FFF;
-    border-right: 1px solid #CCC;
-    margin-bottom: 67px;
-    padding:0 15px 0;
+	margin-bottom: 25px;
 }
-footer nav li:first-Child{	
+nav li:first-Child{	
 	border-left:0 none;
+	padding-left: 0;
 }
-footer nav li:last-Child{
+nav li:last-Child{
 	border-right:0 none;
+	padding-right:0;
 }
-
+.navigation{
+	float:left;
+	width:388px;
+}
+footer nav{float:left;}
 footer nav ul a{
 	color:#FFF;
 	font-size:12px;
@@ -273,10 +420,9 @@ footer nav ul a{
 	text-shadow:1px 1px rgba(60, 60, 60, 0.9);
 	text-decoration:none;
 }
-
-footer .social-icons{
-	float:right;
-	width:112px;
+footer .social-icons{float:left;}
+footer .textarea{
+	height:100px;
 }
 #copyright span{
 	margin:0 10px 0;
@@ -286,7 +432,8 @@ footer .social-icons{
 ============================================================ */
 .search_form{position:relative;}
 .search_form .search{
-	bottom: 30px;
+	border: 1px solid #00B9FF;
+	bottom: 15px;
 	position: absolute;
 	right: 0;
 }
@@ -337,10 +484,10 @@ footer .social-icons{
 .social-icons a{
 	background:url("../images/icons/icn-social-pages.png") no-repeat;
 	display:inline-block;
-	height:27px;
+	height:44px;
 	margin-right:10px;
 	text-indent:-9000px;
-	width:27px;
+	width:44px;
 }
 .social-icons a.facebook{background-position:left;}
 .social-icons a.twitter{background-position:center;}
