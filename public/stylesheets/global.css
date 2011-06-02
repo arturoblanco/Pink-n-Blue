@@ -304,14 +304,39 @@ nav ul a:hover{
 #highlight_offer{background:#FFF url('../images/misc/highlight_offer.png') no-repeat top left;}
 #highlight_masturbators{background:#FFF url('../images/misc/highlight_masturbators.png') no-repeat top left;}
 #highlight_monthly{background:#FFF url('../images/misc/highlight_monthly.png') no-repeat top left;}
-
-#highlights .highlight_category h3{
+#highlight_offer h3{
+    margin: 170px 0 0 10px;
+    text-align: center;
+}
+#highlight_offer p{
+	color:#FFF;
+	text-align:center;
+	text-shadow:0px 1px 1px #FFF;
+}
+#highlight_offer span{
+    color: #FFF;
+    font-size: 90px;
+    font-weight: bold;
+	left:94px;
+    position: relative;
+    text-shadow:4px 1px 9px rgba(0, 0, 0, 0.8);
+    top: 155px;
+}
+#highlight_offer h3 a{
+    color: #FFF;
+    font-size: 35px;
+    font-weight: bold;
+    text-shadow:4px 1px 9px rgba(0, 0, 0, 0.8);
+}
+.highlight_category h3{
 	margin:195px 15px 15px 15px;
 	text-transform:uppercase;
 }
 
-#highlights .highlight_category h3 a{
-	color:#000;
+.highlight_category h3 a{
+	color: #000;
+    font-size: 15px;
+    text-decoration: none;
 }
 
 #highlights .highlight_category p{
