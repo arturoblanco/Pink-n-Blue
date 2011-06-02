@@ -11,7 +11,6 @@ gem 'mysql2'
 gem 'sass'
 gem 'coffee-script'
 gem 'uglifier'
-
 gem 'jquery-rails'
 
 group :test, :development do
