@@ -10,49 +10,39 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110601032345) do
+ActiveRecord::Schema.define(:version => 20110602044034) do
 
-  create_table "articles", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "articles", ["name"], :name => "index_articles_on_name", :unique => true
-
-  create_table "presentations", :force => true do |t|
+  create_table "categories", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "presentations", ["name"], :name => "index_presentations_on_name", :unique => true
+  add_index "categories", ["id"], :name => "index_categories_on_id", :unique => true
+  add_index "categories", ["name"], :name => "index_categories_on_name", :unique => true
 
   create_table "products", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "products", ["name"], :name => "index_products_on_name", :unique => true
-
-  create_table "subarticles", :force => true do |t|
-    t.integer  "product_id"
-    t.integer  "presentation_id"
-    t.integer  "article_id"
-    t.integer  "in_stock"
+    t.text     "description"
     t.float    "price_for_sale"
-    t.float    "price_of_buy"
+    t.float    "price_for_buy"
     t.float    "discount"
     t.string   "color"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "subarticles", ["article_id"], :name => "index_subarticles_on_article_id"
-  add_index "subarticles", ["color"], :name => "index_subarticles_on_color"
-  add_index "subarticles", ["presentation_id"], :name => "index_subarticles_on_presentation_id"
-  add_index "subarticles", ["product_id"], :name => "index_subarticles_on_product_id"
+  add_index "products", ["id"], :name => "index_products_on_id", :unique => true
+  add_index "products", ["name"], :name => "index_products_on_name", :unique => true
+
+  create_table "subcategories", :force => true do |t|
+    t.string   "name"
+    t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "subcategories", ["id"], :name => "index_subcategories_on_id", :unique => true
+  add_index "subcategories", ["name"], :name => "index_subcategories_on_name", :unique => true
 
 end

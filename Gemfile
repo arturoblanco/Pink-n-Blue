@@ -12,6 +12,7 @@ gem 'sass'
 gem 'coffee-script'
 gem 'uglifier'
 gem 'jquery-rails'
+gem "paperclip", "~> 2.3"
 
 group :test, :development do
   gem "rspec-rails", "~> 2.6"
