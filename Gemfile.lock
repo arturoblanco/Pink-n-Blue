@@ -100,6 +100,7 @@ GEM
       railties (~> 3.0)
       rspec (~> 2.6.0)
     sass (3.1.2)
+    simple_form (1.4.0)
     sprockets (2.0.0.beta.9)
       hike (~> 1.0)
       rack (~> 1.0)
@@ -125,4 +126,5 @@ DEPENDENCIES
   rails (= 3.1.0.rc1)
   rspec-rails (~> 2.6)
   sass
+  simple_form
   uglifier
