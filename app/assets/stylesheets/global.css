@@ -56,6 +56,7 @@ body{
   width:975px;
 }
 h1 {
+	color:#000;
     font-size: 2.4em;
 }
 h2 {
@@ -83,7 +84,6 @@ h1 span {
     text-transform: uppercase;
 }
 p{
-    color: #7B7B7B; 
 }
 
 a{
@@ -372,7 +372,7 @@ nav ul a:hover{
 }
 .hot_banner h2{
 	color:#000;
-	margin: 210px 0 5        b px;
+	margin: 210px 0 5px;
 }
 .hot_banner h2:first-letter{
 	font-size:1.8em;
@@ -406,6 +406,7 @@ nav ul a:hover{
 	width:300px;
 }
 .products-list{
+	color: #7B7B7B; 
 	float:right;
 	width:660px;
 }
