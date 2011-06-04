@@ -239,7 +239,7 @@ nav ul a:hover{
 }
 .steps{
   -moz-border-radius:6px 0 0 0; -webkit-border-radius:6px 0 0 0; border-radius:6px 0 0 0;
-  background:#212121 url("../images/backgrounds/bg_title.gif") no-repeat left center;
+  background:#212121 url("/assets/backgrounds/bg_title.gif") no-repeat left center;
   float:left;
   height: 60px;
   width: 660px;
@@ -255,7 +255,7 @@ nav ul a:hover{
   margin-right: 10px;
 }
 .steps li.step-number{
-  background: url("../images/misc/step.png") no-repeat center;
+  background: url("/assets/misc/step.png") no-repeat center;
   border: 0 none;
   color: #FFF;
   font-size: 1.6em;
@@ -313,12 +313,12 @@ nav ul a:hover{
   margin-left:0;
 }
 
-#highlight_luxury{background:#FFF url('../images/misc/highlight_luxury.png') no-repeat top left;}
-#highlight_body_lotions{background:#FFF url('../images/misc/highlight_body_lotions.png') no-repeat top left;}
-#highlight_capas_extensores{background:#FFF url('../images/misc/highlight_capas_extensores.png') no-repeat top left;}
-#highlight_offer{background:#FFF url('../images/misc/highlight_offer.png') no-repeat top left;}
-#highlight_masturbators{background:#FFF url('../images/misc/highlight_masturbators.png') no-repeat top left;}
-#highlight_monthly{background:#FFF url('../images/misc/highlight_monthly.png') no-repeat top left;}
+#highlight_luxury{background:#FFF url('/assets/misc/highlight_luxury.png') no-repeat top left;}
+#highlight_body_lotions{background:#FFF url('/assets/misc/highlight_body_lotions.png') no-repeat top left;}
+#highlight_capas_extensores{background:#FFF url('/assets/misc/highlight_capas_extensores.png') no-repeat top left;}
+#highlight_offer{background:#FFF url('/assets/misc/highlight_offer.png') no-repeat top left;}
+#highlight_masturbators{background:#FFF url('/assets/misc/highlight_masturbators.png') no-repeat top left;}
+#highlight_monthly{background:#FFF url('/assets/misc/highlight_monthly.png') no-repeat top left;}
 #highlight_offer h3{
   margin: 170px 0 0 10px;
   text-align: center;
@@ -360,7 +360,7 @@ nav ul a:hover{
 /*Products
 ---------------------------------------- */
 .hot_banner{
-  background: url("../images/misc/new_collection.png") no-repeat left top #BE3462;
+  background: url("/assets/misc/new_collection.png") no-repeat left top #BE3462;
   border-bottom: 6px solid #000;
   color:#FFF;
   font-weight:bold;
@@ -399,7 +399,7 @@ nav ul a:hover{
   overflow:hidden;
 }
 .main_search.women-image{
-  background: url("../images/misc/hot_search.jpg") no-repeat left top;
+  background: url("/assets/misc/hot_search.jpg") no-repeat left top;
 }
 .products{
   float:left;
@@ -411,7 +411,7 @@ nav ul a:hover{
   width:660px;
 }
 .product_image {
-  background: url("../images/backgrounds/bg-product.gif") repeat-x left top #999;
+  background: url("/assets/backgrounds/bg-product.gif") repeat-x left top #999;
   display: table-cell;
   height: 182px;
   overflow: hidden;
@@ -454,7 +454,7 @@ nav ul a:hover{
 /* Footer
 ============================================================ */
 footer{
-  background:#242524 url("../images/backgrounds/bg-footer.png") repeat-x left top;
+  background:#242524 url("/assets/backgrounds/bg-footer.png") repeat-x left top;
   border-top: 2px solid #00B9FF;
   color:#FFF;
   height:210px;
@@ -593,7 +593,7 @@ footer .textarea{
 /* Icons
 ============================================================ */
 .social-icons a{
-  background:url("../images/icons/icn-social-pages.png") no-repeat;
+  background:url("/assets/icons/icn-social-pages.png") no-repeat;
   display:inline-block;
   height:44px;
   margin-right:10px;
@@ -606,7 +606,7 @@ footer .textarea{
 /*Products
 ---------------------------------------- */
 .new_product {
-  background: url("../images/misc/new_product.gif") no-repeat left top;
+  background: url("/assets/misc/new_product.gif") no-repeat left top;
   color: #FFF;
   font-weight: bold;
   height: 21px;

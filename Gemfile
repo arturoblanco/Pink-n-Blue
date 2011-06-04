@@ -13,8 +13,9 @@ gem 'mysql2'
 gem 'uglifier'
 gem 'jquery-rails'
 gem "paperclip", "~> 2.3"
-#gem "will_paginate", "~> 3.0.pre2"
 gem "simple_form"
+gem 'kaminari'
+gem "unicorn", "~> 3.6.2"
 
 group :test, :development do
   gem "rspec-rails", "~> 2.6"
