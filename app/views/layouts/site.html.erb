@@ -5,7 +5,7 @@
     <!--[if IE]><![endif]-->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
     <title>Pink-n-Blue</title>
-    <link href="../images/favicon.png" rel="shortcut icon" />
+    <%= favicon_link_tag "favicon.png" %>
     <%= stylesheet_link_tag "global" %>
   </head>
   <!--[if lte IE 7 ]> <body class="ie8 ie7"> <![endif]-->
@@ -15,7 +15,7 @@
         <header id="header">
           <div class="wrapper">
             <h1 id="logo">
-              <%= link_to image_tag("../images/misc/header_logo.png"), root_path, :alt => "pink-n-blue logo" %>
+              <%= link_to image_tag("../assets/images/misc/header_logo.png"), root_path, :alt => "pink-n-blue logo" %>
             </h1>
             <div class="search-content">
               <form action="" method="post" class="search_form">
