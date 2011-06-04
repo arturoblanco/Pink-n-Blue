@@ -8,8 +8,8 @@ gem 'rails', '3.1.0.rc1'
 gem 'mysql2'
 
 # Asset template engines
-gem 'sass'
-gem 'coffee-script'
+#gem 'sass'
+#gem 'coffee-script'
 gem 'uglifier'
 gem 'jquery-rails'
 gem "paperclip", "~> 2.3"
