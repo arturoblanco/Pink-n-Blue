@@ -109,7 +109,7 @@ ul.horz li{float:left;list-style-type: none;}
 /* Header
 ============================================================ */
 header{
-  background:#242524 url("../images/backgrounds/bg-footer.png") repeat-x left top;
+  background:#242524 url("/assets/backgrounds/bg-footer.png") repeat-x left top;
   border-top:2px solid #FF0097;
   height:103px;
   margin-bottom: 15px;
