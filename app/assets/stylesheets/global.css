@@ -85,11 +85,15 @@ h1 span {
   text-transform:uppercase;
 }
 p{
+	line-height: 16px;
 	margin-bottom:30px;
 }
 
+.pagination a:hover,
+.pagination .page:hover,
 a{
 	color:#DE318F;
+	cursor:pointer;
 	text-decoration:none;
 	text-align: left;
 }
@@ -157,9 +161,32 @@ nav ul a:hover{
   background-color:#FFF;
 	border-bottom: 6px solid #000;
   color:#7B7B7B;
-	padding: 180px 14px 50px;
+	padding: 180px 14px 25px;
 }
+.pagination span{padding: 0 3px;}
+.pagination-list{
+  border-bottom: 1px solid #C3C3C3;
+  display: inline-block;
+  padding: 29px 0 2px;  
+	width: 100%;
+}
+.pagination-list nav{float:right;}
 .pagination strong{color: #DE318F;}
+.pagination p{
+	float:left;
+	margin-bottom:10px;
+}
+.pagination a,
+.pagination .page{
+	color:#7B7B7B;
+	font-size:15px;
+}
+.pagination .page{
+	display: inline-block;
+  text-align: center;
+  text-decoration: underline;
+}
+.regular{margin: 5px 0;}
 /* Home
 ---------------------------------------- */
 .instructions{
@@ -389,22 +416,27 @@ nav ul a:hover{
 .hot_banner p{
   line-height: 16px;
 }
+
 .list li {
   background-color:#FFF;
   border-bottom: 1px solid #B4B4B4;
   float: left;
-  height: 328px;
   margin: 0 15px 15px 0;
   overflow: hidden;
   position: relative;
   width: 205px;
 }
+.list li:nth-child(3n){margin-right:0;}
 .main-content{
   margin-bottom: 25px;
   overflow:hidden;
 }
+.list_description p{margin-bottom:57px;}
 .main_search.women-image{
   background: url("/assets/misc/hot_search.jpg") no-repeat left top;
+}
+.main_search.women-image h5{
+	margin:15px 0 25px;
 }
 .products{
   float:left;
@@ -413,10 +445,14 @@ nav ul a:hover{
 .products-list{
   color: #7B7B7B;
   float:right;
-  width:660px;
+  width:645px;
 }
+.products-list .product-info{margin: 15px 9px;}
+.products-list .product_price,
+.products-list .product_colors{margin-bottom:13px;}
+.product-info .btn{margin: 0 27%;}	
 .products-list h1 span{font-weight:normal;}
-.products-list h1{margin-bottom:10px;}
+.products-list h1{margin-bottom:18px;}
 .product_image {
   background: url("/assets/backgrounds/bg-product.gif") repeat-x left top #999;
   display: table-cell;
@@ -580,6 +616,15 @@ footer .textarea{
 
 /* Buttons
 ============================================================ */
+.btn{
+	-moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;
+   padding: 9px 18px;
+}
+.btn.black{
+	background-color:#333;
+	color:#FFF;
+	display: inline-block;
+}
 .submit_search{
   -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;
   background-color:#333;
