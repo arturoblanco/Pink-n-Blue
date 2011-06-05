@@ -1,0 +1,111 @@
+
+  /************************************************************\
+  *
+  *    Skinned Select Box Copyright 2007 Derek Harvey
+  *		 www.lotsofcode.com
+  *
+  *    This file is part of Skinned Select Box .
+  *
+  *    Skinned Select Boxis free software; you can redistribute it and/or modify
+  *    it under the terms of the GNU General Public License as published by
+  *    the Free Software Foundation; either version 2 of the License, or
+  *    (at your option) any later version.
+  *
+  *    Skinned Select Box is distributed in the hope that it will be useful,
+  *    but WITHOUT ANY WARRANTY; without even the implied warranty of
+  *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  *    GNU General Public License for more details.
+  *
+  *    You should have received a copy of the GNU General Public License
+  *    along with Skinned Select Box; if not, write to the Free Software
+  *    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  *
+  \************************************************************/
+
+/* skinned select */
+
+div.cmf-skinned-select {
+	background: url("../images/select_large.gif") no-repeat 0px 100%;
+}
+div.cmf-skinned-select select {
+	opacity: 0;
+	filter: alpha(opacity = 0);
+	moz-opacity: 0;
+	position: relative;
+	z-index: 100;
+	top:7px;
+}
+div.cmf-skinned-select .select-text {
+  	position: absolute;
+	text-indent: 10px;
+	line-height: 19px;
+	width: 400x;
+	z-index: 1;
+}
+div.cmf-skinned-select{
+	display:inline-block;
+    padding: 2px 12px 20px 0;
+	 
+}
+div.cmf-skinned-text{
+	padding:10px;
+}
+div.cmf-skinned-select .select-text{
+	margin: 10px -2px 0 0;
+}
+div.cmf-skinned-select select{
+	width: 406px;
+}
+div.cmf-skinned-select select option {
+	padding:1px 0 0 7px;
+	width:100%;
+}
+
+/* select short */
+
+.short div.cmf-skinned-select {
+	background: url("/assets/misc/dropdown.png") no-repeat 0px 30%;
+	height:50px;
+}
+.short div.cmf-skinned-select .select-text{
+	width:126px;
+}
+.short div.cmf-skinned-select select{
+	width: 107px;
+}
+
+
+/* select regular*/
+
+.regular div.cmf-skinned-select {
+	background: url("/assets/misc/dropdown.png") no-repeat 0px 100%;
+}
+.regular div.cmf-skinned-select .select-text{
+	width:288px;
+}
+.regular div.cmf-skinned-select select{
+	width:280px;
+}
+
+
+/* select small */
+.small div.cmf-skinned-select {
+	background: url("/assets/select_small.gif") no-repeat 0px 100%;
+}
+.small div.cmf-skinned-select .select-text{
+	width:100px;
+}
+.small div.cmf-skinned-select select{
+	width:75px;
+}
+
+
+div.cmf-skinned-select .select-text
+
+/* non javascript version select */
+
+.my-skinnable-select select {
+  width: 150px;
+  font-size: 11px;
+  border: 1px solid #D5E6EE;
+}
