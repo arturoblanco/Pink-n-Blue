@@ -44,7 +44,7 @@ div.cmf-skinned-select .select-text {
 }
 div.cmf-skinned-select{
 	display:inline-block;
-    padding: 2px 12px 20px 0;
+  padding: 2px 3px 20px 0;
 	 
 }
 div.cmf-skinned-text{
@@ -85,7 +85,7 @@ div.cmf-skinned-select select option {
 	width:288px;
 }
 .regular div.cmf-skinned-select select{
-	width:280px;
+	width:286px;
 }
 
 
