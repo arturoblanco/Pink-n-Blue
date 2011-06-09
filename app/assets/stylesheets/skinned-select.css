@@ -24,8 +24,11 @@
 
 /* skinned select */
 
-div.cmf-skinned-select {
-	background: url("../images/select_large.gif") no-repeat 0px 100%;
+.medium div.cmf-skinned-select {
+	background: url("/assets/misc/dropdown_medium.jpg") no-repeat 0px 100%;
+	width: 142px !important;
+	padding-bottom: 25px;
+	text-align: left;
 }
 div.cmf-skinned-select select {
 	opacity: 0;
@@ -36,7 +39,7 @@ div.cmf-skinned-select select {
 	top:7px;
 }
 div.cmf-skinned-select .select-text {
-  	position: absolute;
+  position: absolute;
 	text-indent: 10px;
 	line-height: 19px;
 	width: 400x;
@@ -53,8 +56,9 @@ div.cmf-skinned-text{
 div.cmf-skinned-select .select-text{
 	margin: 10px -2px 0 0;
 }
-div.cmf-skinned-select select{
+.regular div.cmf-skinned-select select{
 	width: 406px;
+	color:#FF0097!important;
 }
 div.cmf-skinned-select select option {
 	padding:1px 0 0 7px;
@@ -80,6 +84,7 @@ div.cmf-skinned-select select option {
 .regular div.cmf-skinned-select {
 	background: url("/assets/misc/dropdown.png") no-repeat 0px 100%;
 	color: #FF0097!important;
+	font-weight: bold;
 }
 .regular div.cmf-skinned-select .select-text{
 	width:288px;
@@ -87,8 +92,6 @@ div.cmf-skinned-select select option {
 .regular div.cmf-skinned-select select{
 	width:286px;
 }
-
-
 /* select small */
 .small div.cmf-skinned-select {
 	background: url("/assets/select_small.gif") no-repeat 0px 100%;
