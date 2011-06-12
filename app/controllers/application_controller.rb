@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :hola, :only => :index
+  before_filter :instance_filter_params, :only => :index
 
-  def hola
+  def instance_filter_params
     if params[:filter_search_form]
       params[:filter_search_form].each do |key, value|
         params[key.to_sym] = value
@@ -11,4 +11,5 @@ class ApplicationController < ActionController::Base
       params.delete(:filter_search_form)
     end
   end
+
 end
