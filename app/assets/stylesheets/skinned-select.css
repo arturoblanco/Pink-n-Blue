@@ -32,9 +32,11 @@
   padding-bottom: 25px;
   text-align: right;
   width: 134px !important;
+	height:13px!important;
 }
-
+.medium div.cmf-skinned-select select option{color: #666;}
 div.cmf-skinned-select select {
+	cursor:pointer;
 	opacity: 0;
 	filter: alpha(opacity = 0);
 	moz-opacity: 0;
@@ -65,6 +67,7 @@ div.cmf-skinned-select .select-text{
 	color:#FF0097!important;
 }
 div.cmf-skinned-select select option {
+	cursor:pointer;
 	padding:1px 0 0 7px;
 	width:100%;
 }

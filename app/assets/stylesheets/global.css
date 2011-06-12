@@ -98,7 +98,9 @@ a{
 }
 
 a:hover,
-button:hover{
+button:hover, 
+li:hover,
+input:focus{
   -moz-transition: all 0.3s ease-out;  /* FF4+ */
   -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
   -webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
@@ -224,15 +226,15 @@ nav ul a:hover{
 
 }
 .price dl dt {
-  float: left;
-  margin: 6px 0 0 6px;
-  width: 70px;
+  float:left;
+  margin:12px 0 0 6px;
+  width:70px;
 }
 .regular{padding-top: 8px;}
 .square .article-price{
   color: #7B7B7B;
   font-size: 28px;
-  line-height: 20px;
+  line-height:20px;
   margin: 0;
   text-align: center;
 }
@@ -740,8 +742,6 @@ footer .textarea{
 	clear:both;
 	background-color:#FFF;
 	max-height:120px;
-	overflow-y:auto;
-	overflow-x: hidden;
 	border:dotted 1px #7B7B7B;
 	width:285px;
 	z-index:99999;
@@ -752,6 +752,7 @@ footer .textarea{
 
 .selectbox_wrapper .select_options li{
 	background-color:#FFF;
+	font-weight:bold;
 	padding:5px;
 	color:#7B7B7B;
 	cursor:pointer;
@@ -760,9 +761,10 @@ footer .textarea{
 .selectbox_wrapper .select_options li var{
 	display:none;
 }
-.selectbox_wrapper .select_options li:hover{
-	background:#7B7B7B;
-	color:#FFF;
+.selectbox_wrapper .select_options li:hover,
+select option:hover{
+	opacity: 0.5;
+	filter: alpha(opacity = 0.5);
 }
 
 .selectbox_wrapper.mini{
@@ -784,12 +786,11 @@ footer .textarea{
 
 .selectbox_wrapper.medium{
 	background:url("../assets/textbox_medium.gif") no-repeat left top;
-	margin-top:6px;
 	height: 34px;
   width: 138px;
 }
 .selectbox_wrapper.medium .select_value{
-	width:243px;
+	width:88%;
 	color:#FF0097;
 }
 .selectbox_wrapper.medium .select_arrow{
