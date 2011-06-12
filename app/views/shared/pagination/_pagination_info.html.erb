@@ -1,0 +1,5 @@
+<span>
+  <%= object_title.capitalize %>
+  <strong><%= "#{collection.offset_value + 1} a #{collection.last_page? ? collection.total_count : collection.offset_value + collection.limit_value}" %></strong>
+  de <%= collection.total_count %>
+</span>
