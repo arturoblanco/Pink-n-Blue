@@ -72,7 +72,8 @@ h5 {
   font-size: 1.3em;
   margin: 15px 0 10px;
 }
-h6 {
+h6,
+label span {
 	color:#000;
   font-size: 1em;
 }
@@ -159,7 +160,7 @@ nav ul a:hover{
   background-color:#FFF;
 	border-bottom: 6px solid #000;
   color:#7B7B7B;
-  overflow: hidden;
+  margin-bottom: 20px;
   position: relative;
 }
 .pagination span{padding: 0 3px;}
@@ -254,8 +255,8 @@ nav ul a:hover{
   background-color:#DE0686;
   color: #FFF;
   height: 45px;
-  margin: 7px 9px;
-  width: 292px;
+ 	margin: 7px 15px 7px 3px; 
+ 	width: 292px;
 }
 
 /* Home
@@ -425,7 +426,6 @@ nav ul a:hover{
 .hot_banner p{
   line-height: 16px;
 }
-
 .list li {
  	background-color:#FFF;
   border-bottom: 1px solid #B4B4B4;
@@ -454,6 +454,12 @@ nav ul a:hover{
 .main_search.women-image h5{
 	margin:15px 0 25px;
 }
+.main_search.women-image label span {
+  display: block;
+  font-weight: bold;
+	margin-bottom:5px;
+}
+
 .products{
   float:left;
   width:307px;
@@ -513,6 +519,7 @@ nav ul a:hover{
   padding: 0 9px 17px;
   width: 300px;
 }
+.product-price .horz{overflow:visible;}
 .product-price li:not(.total-article){
 	color:#000;
 	width:150px;
@@ -678,6 +685,141 @@ footer .textarea{
   background-color:#FFF;
   height:30px;
   width:285px;
+}
+
+
+
+
+.selectbox_wrapper{
+	width:285px;
+	height:30px;
+	background:transparent url('../img/textbox.gif') no-repeat left top;
+	position:relative;
+}
+
+.selectbox_wrapper .select_value {
+    color: #7B7B7B;
+    display: block;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    height: 12px;
+    letter-spacing: 1px;
+    line-height: 12px;
+    margin: 3px 0 0 3px;
+    padding: 5px;
+    width: 244px;
+	cursor:pointer;
+	overflow:hidden;
+}
+
+.selectbox_wrapper .select_arrow{
+	width:25px;
+	height:25px;
+	overflow:hidden;
+	text-indent:-999px;
+	float:right;
+	background:transparent url('../assets/select.gif') no-repeat left top;
+	margin:3px 2px 0 0;
+	cursor:pointer;
+}
+
+.selectbox_wrapper .textselect{
+	display:block;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+	background:transparent;
+	position:absolute;
+	border:0;
+	top:-9999px;
+	left:-9999px;
+}
+
+.selectbox_wrapper .select_options{
+	clear:both;
+	background-color:#FFF;
+	max-height:120px;
+	overflow-y:auto;
+	overflow-x: hidden;
+	border:dotted 1px #7B7B7B;
+	width:285px;
+	z-index:99999;
+	position:absolute;
+	top:30px;
+	display:none;
+}
+
+.selectbox_wrapper .select_options li{
+	background-color:#FFF;
+	padding:5px;
+	color:#7B7B7B;
+	cursor:pointer;
+	width: 60px;
+}
+.selectbox_wrapper .select_options li var{
+	display:none;
+}
+.selectbox_wrapper .select_options li:hover{
+	background:#7B7B7B;
+	color:#FFF;
+}
+
+.selectbox_wrapper.mini{
+	width:85px;
+	background:url("../assets/textbox_mini.gif") no-repeat left top;
+}
+
+.selectbox_wrapper.mini .select_value {
+    width: 45px;
+}
+
+.selectbox_wrapper.mini .select_options{
+	width:85px;
+}
+
+.selectbox_wrapper.disabled .select_arrow{
+	background:url("../assets/select_disabled.gif") no-repeat left top;
+}
+
+.selectbox_wrapper.medium{
+	background:url("../assets/textbox_medium.gif") no-repeat left top;
+	margin-top:6px;
+	height: 34px;
+  width: 138px;
+}
+.selectbox_wrapper.medium .select_value{
+	width:243px;
+	color:#FF0097;
+}
+.selectbox_wrapper.medium .select_arrow{
+	margin: -22px 7px 0 0;
+}
+.selectbox_wrapper.medium .select_options{
+	border-color:#00B9FF;
+	width:130px;
+}
+.selectbox_wrapper.medium .select_options li{width:120px;}
+.selectbox_wrapper.colors .select_options li span{
+  border: 1px solid #C3C3C3;
+  display: block;
+  height: 7px;
+  line-height: 3px;
+  margin: 0 1px 0 0;
+  text-indent: 30px;
+  width: 23px;
+}
+.selectbox_wrapper.colors .select_value span{
+  border: 1px solid #C3C3C3;
+  color: #666;
+  display: block;
+  height: 7px;
+  line-height: 5px;
+  margin: 3px 0 0 3px;
+  padding: 0;
+  text-indent: 35px;
+  text-transform: capitalize;
+  width: 23px;
 }
 
 /* Tables

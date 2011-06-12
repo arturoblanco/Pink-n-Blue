@@ -1,3 +1,3 @@
 $(document).ready(function(){
-	$("select").select_skin();
+	$("select:not(.colors)").select_skin();
 });

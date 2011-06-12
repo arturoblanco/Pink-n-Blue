@@ -66,8 +66,10 @@
 											<h5>limite a sua pesquisa</h5>
 											<p>Facilmente encontrar os produtos que você precisa utilizar este sistema de busca simples e rápida.</p>
 											<div class="category">
-												<h6>Categoria</h6>
-												<label for="select_category">Seleccione una categoría</label>
+												<label for="select_category">
+												  <span>Categoria</span>
+												  Seleccione una categoría
+												</label>
 												<div class="regular">
   												<select>
   													<option>Anal1</option>
@@ -76,18 +78,18 @@
   													<option>Anal1</option>
   												</select>
 												</div>
-												<h6>Lineas</h6>
-												<label for="">Seleccione una línea</label>
+											
+												<label for="">
+												  <span>Lineas</span>
+												  Seleccione una línea
+												</label>
 												<div class="regular">
-  												<select>
-  													<option>Todas Las Lineas</option>
-  													<option>Anal1</option>
-  													<option>Anal1</option>
-  													<option>Anal1</option>
-  												</select>
-												</div>
-												<h6>Ordenar</h6>
-												<label for="">Ordenar lista por</label>
+  												<input type="text">
+  											</div>
+												<label for="">
+												  <span>Ordenar</span>
+												  Ordenar lista por
+												</label>
 												<div class="regular">
 												  <select>
   													<option>Todas Las Lineas</option>
@@ -131,15 +133,21 @@
       						  <div class="symbol">R$</div><div class="article-price">750<span>.25</span></div>
     						  </li>
                 <li>
-                  <fieldset class="medium">
-                    <label for="">Referencia</label>
-                    <select id="">
-  										<option>Todas Las Lineas</option>
-  										<option>Anal1</option>
-  										<option>Anal1</option>
-  										<option>Anal1</option>
-  									</select>
-                  </fieldset>
+                  <fieldset>
+            				<div id="field_reference">
+            					<label for="reference">Referencia</label>
+            					<select id="reference" name="reference" class="selectbox medium colors">
+            						<option value="pink">rosa</option>
+            						<option value="green">verde</option>
+            						<option value="yellow">amarelo</option>
+            						<option value="blue">azul</option>
+            						<option value="white">branco</option>
+            						<option value="black">preto</option>
+            						<option value="black">preto</option>
+            						<option value="black">preto</option>
+            					</select>
+            				</div>
+                </fieldset>
                 </li>
                 <li>
                 <fieldset class="medium">
@@ -233,5 +241,6 @@
     <script src="/assets/modernizr"></script>
     <script src="/assets/selectbox.skin"></script>
     <script src="/assets/selectSkin"></script>
+    <script src="/assets/select-color"></script>
   </body>
 </html>
