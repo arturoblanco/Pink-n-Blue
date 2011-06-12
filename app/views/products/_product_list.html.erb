@@ -1,0 +1,29 @@
+<div class="pagination" id="result_count">
+  <span>Produtos <strong>1 a 24</strong> de <%= @products.length %></span>
+</div>
+<ul class="list" class="horz">
+  <div class="autopagerize_page_element">
+    <% @products.each do |product| %>
+      <li>
+        <div class="product_image">
+          <img src="/assets/misc/products/thumbs/1.gif" alt="" />
+        </div>
+        <div class="product-info">
+          <span class="new_product">Novo !!</span>
+          <h3> <%= link_to product.description, "javascript:void(0);" %> </h3>
+          <div class="product_price"><%= product.price_for_sale %></div>
+          <ul class="product_colors horz">
+            <% product.color.split.each do |p_color| %>
+              <li class="product_color_<%=p_color%>"><%= p_color.capitalize %></li>
+            <% end %>
+          </ul>
+          <a class="buy_product" href="javascript:void(0)">Comprar</a>
+        </div>
+      </li>
+    <% end %>
+  </div>
+</ul>
+<div class="pagination">
+  <span>Produtos <%= "#{params[:page]} a 24 de #{@products.length}" %></span>
+  <%= paginate @products %>
+</div>

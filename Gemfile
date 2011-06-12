@@ -16,6 +16,9 @@ gem "paperclip", "~> 2.3"
 gem "simple_form"
 gem 'kaminari'
 gem "unicorn", "~> 3.6.2"
+gem "squeel"
+gem "meta_search"
+
 
 group :test, :development do
   gem "rspec-rails", "~> 2.6"
