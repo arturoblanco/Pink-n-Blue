@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   layout "site"
 
   def index
-    @products = Product.where(:name.matches =>  "%#{params[:product_name]}%").page(params[:page]).per(12)
+    @products = Product.where(:name.matches =>  "%#{params[:product_name]}%").page(params[:page]).per(2)
   end
 
   private
