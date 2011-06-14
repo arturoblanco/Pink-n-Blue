@@ -9,9 +9,20 @@ describe ProductsController do
       get :index
       response.should be_success
     end
+    it "should preload all the available categories" do
+      get :index
+      assigns(:categories).should_not be_blank
+    end
     it "should get a list of all available products" do
       get :index
-      assigns(:products).should_not be_nil
+      assigns(:products).should_not be_blank
+    end
+  end
+
+  context "on XHR GET to #products" do
+    it "should respond with success" do
+    end
+    it "should preload all the categories availables" do
     end
   end
 
