@@ -10,7 +10,7 @@
               <div class="regular">
                 <%=h form.input :product_name, :input_html => {:id => "product_name"}, :required => false, :prompt => "Seleccione un producto..." %>
                 <%=h form.input :category_name, :input_html => {:id => "category_name"}, :required => false, :prompt => "Seleccione una categoria..." %>
-                <%=h form.input :order, :collection => ["Products", "Categories"], :required => false, :prompt => "Seleccione..." %>
+                <%=h form.input :order, :collection => ["Products", "Categories"], :input_html => {:id => "order"}, :required => false, :prompt => "Seleccione..." %>
               </div>
               <div>
                 <%= form.button :submit, "Search", :class => "submit_search", :id => "filter_search_btn" %>
@@ -34,8 +34,8 @@
       <h1>Anal <span>todas as linhas</span></h1>
       <p>All of the orgasmic toys in this collection are under £20, so theyíre perfect as gifts or as little treats for yourself. Perfect for couples on a budget. O kit contÈm um estimulante vibrador massageador multi-velocidade com 4 capas de silicone com textura intercambi·veis.</p>
     </div>
-    <div id="filter_serach_results">
-      <%= render :partial => "product_list" %>
+    <div id="filter_search_results">
+      <%= render :partial => "products_list" %>
     </div>
   </div><!-- .product-list END -->
 </div><!-- .main-content END -->
