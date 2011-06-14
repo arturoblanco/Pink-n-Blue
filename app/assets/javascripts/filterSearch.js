@@ -66,7 +66,6 @@ var filterSearch = ( function  () {
       url: window.location.pathname,
       data: $.param(searchParams),
       success: function  (html) {
-        console.log(html);
         $(filterSearchResults).html(html.data);
       },
       error: function  () {
