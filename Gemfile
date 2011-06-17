@@ -5,7 +5,6 @@ gem 'rails', '3.1.0.rc1'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
 
 # Asset template engines
 #gem 'sass'
@@ -21,10 +20,10 @@ gem "meta_search"
 
 
 group :test, :development do
+  gem 'mysql2'
   gem "rspec-rails", "~> 2.6"
   gem 'factory_girl_rails'
 end
-
 
 # Use unicorn as the web server
 # gem 'unicorn'
