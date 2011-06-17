@@ -7,8 +7,6 @@ gem 'rails', '3.1.0.rc1'
 
 
 # Asset template engines
-#gem 'sass'
-#gem 'coffee-script'
 gem 'uglifier'
 gem 'jquery-rails'
 gem "paperclip", "~> 2.3"
@@ -26,8 +24,10 @@ group :test, :development do
 end
 
 group :production do
- gem "pg"
- gem "therubyracer-heroku"
+  gem 'sass'
+  gem 'coffee-script'
+  gem "pg"
+  gem "therubyracer-heroku"
 end
 
 
