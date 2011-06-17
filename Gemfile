@@ -17,10 +17,10 @@ gem 'kaminari'
 gem "unicorn", "~> 3.6.2"
 gem "squeel"
 gem "meta_search"
-gem 'mysql2'
 
 
 group :test, :development do
+  gem 'mysql2'
   gem "rspec-rails", "~> 2.6"
   gem 'factory_girl_rails'
 end
