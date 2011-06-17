@@ -1,5 +1,5 @@
 # MySQL.  Versions 4.1 and 5.0 are recommended.
-# 
+#
 # Install the MYSQL driver
 #   gem install mysql2
 #
@@ -26,16 +26,6 @@ test:
   encoding: utf8
   reconnect: false
   database: Pink-n-Blue_test
-  pool: 5
-  username: root
-  password:
-  socket: /tmp/mysql.sock
-
-production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: Pink-n-Blue_production
   pool: 5
   username: root
   password:
