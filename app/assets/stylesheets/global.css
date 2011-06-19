@@ -725,7 +725,7 @@ footer .textarea{
 input.text.small{width:74px;}
 input.text.large{width:330px;}
 .search-content{
-  margin-bottom:10px;
+  margin: 9px 0;  
   overflow: hidden;
 }
 .search_form{
@@ -742,10 +742,9 @@ input.text.large{width:330px;}
   color: #7B7B7B;
   display: block;
   float: left;
-  height: 24px;
+  height:17px;
   letter-spacing: 1px;
-  line-height: 24px;
-  margin: 2px 0 0 5px;
+  margin:7px 0 0 5px;
   outline: medium none;
   width: 180px;
 }
