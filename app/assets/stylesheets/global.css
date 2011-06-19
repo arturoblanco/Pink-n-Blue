@@ -120,19 +120,27 @@ ul.horz li{float:left;list-style-type: none;}
 /* Header
 ============================================================ */
 header{
-  background:#242524 url("/assets/backgrounds/bg-footer.png") repeat-x left top;
+  background:#242524 url("/assets/backgrounds/bg_header.gif") repeat-x left top;
   border-top:2px solid #FF0097;
   height:103px;
-  margin-bottom: 15px;
+  margin-bottom:15px;
+  overflow:hidden;
 }
 header #logo{
-  height:60px;
+  display: block;
+  float: left;
+  height: 102px;
+  width: 160px;
+}
+header .content-right{
+  float: right;
+  margin-top: 10px;
 }
 /* Navigation
 ---------------------------------------- */
 header nav{overflow:hidden;}
 header nav ul{
-  border-top: 1px solid rgba(0,0,0,0.2);
+  border-top:1px solid #434343;
   float:right;
   padding-top: 11px;
 }
@@ -140,7 +148,7 @@ header nav ul li{
   border-right:1px solid rgba(0, 0, 0, 0.2);
   height:21px;
   line-height:20px;
-  padding:0 12px;
+  padding:0 30px;
 }
 ul.horz li:last-Child{margin-right:0;}
 header nav ul a{
@@ -716,12 +724,18 @@ footer .textarea{
 }
 input.text.small{width:74px;}
 input.text.large{width:330px;}
-.search_form{position:relative;}
+.search-content{
+  margin-bottom:10px;
+  overflow: hidden;
+}
+.search_form{
+  border-left: 1px solid #434343;
+  float: right;
+  height: 33px;
+  padding-left: 28px;
+}
 .search_form .search{
   border: 1px solid #00B9FF;
-  bottom: 15px;
-  position: absolute;
-  right: 0;
 }
 .search_form input[type="text"]{
   border: 1px solid #FFFFFF;
