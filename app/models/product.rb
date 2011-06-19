@@ -5,4 +5,7 @@ class Product < ActiveRecord::Base
 
   # VALIDATIONS
   validates :name, :uniqueness => true
+
+  # FRIENDLY ID
+  has_friendly_id :name, :use_slug => true
 end

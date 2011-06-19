@@ -10,10 +10,10 @@
         </div>
         <div class="product-info">
           <span class="new_product">Novo !!</span>
-          <h3> <%= link_to product.description, "javascript:void(0);" %> </h3>
+          <h3> <%= link_to product.description, product_path(product) %> </h3>
           <div class="product_price"><%= product.price_for_sale %></div>
           <ul class="product_colors horz">
-            <% product.color.split.each do |p_color| %>
+            <% product.color.split(",").each do |p_color| %>
               <li class="product_color_<%=p_color%>"><%= p_color.capitalize %></li>
             <% end %>
           </ul>

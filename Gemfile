@@ -15,6 +15,7 @@ gem 'kaminari'
 gem "unicorn", "~> 3.6.2"
 gem "squeel"
 gem "meta_search"
+gem "friendly_id"
 
 
 group :test, :development do

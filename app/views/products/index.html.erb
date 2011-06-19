@@ -1,41 +1,16 @@
 <div class="main-content">
-  <div class="products">
-    <div class="list_wrapper">
-      <div class="banner">
-        <div class="main_search  women-image">
-          <h5>limite a sua pesquisa</h5>
-          <p>Facilmente encontrar os produtos que você precisa utilizar este sistema de busca simples e rápida.</p>
-          <div class="category">
-            <%= simple_form_for :filter_search_form, :html =>{:onsubmit => "return false;", :id => "filter_search_form"} do |form| %>
-              <div class="regular">
-                <%=h form.input :product_name, :input_html => {:id => "product_name"}, :required => false, :prompt => "Seleccione un producto..." %>
-                <%=h form.input :category_name, :input_html => {:id => "category_name"}, :required => false, :prompt => "Seleccione una categoria..." %>
-                <%=h form.input :order, :collection => ["Products", "Categories"], :input_html => {:id => "order"}, :required => false, :prompt => "Seleccione..." %>
-              </div>
-              <div>
-                <%= form.button :submit, "Search", :class => "submit_search", :id => "filter_search_btn" %>
-              </div>
-            <% end %>
-          </div>
-        </div>
-        <div class="hot_banner">
-          <h2>nova <span>coleção</span></h2>
-          <p>
-            Selena Buckle And Zip<br>
-            Body In Stock<br>
-            $ 34.00
-          </p>
-        </div>
-      </div>
-    </div>
-  </div><!-- .products END -->
+  <%= render :partial => "product_left_panel" %>
   <div class="products-list">
     <div id="list_description">
       <h1>Anal <span>todas as linhas</span></h1>
-      <p>All of the orgasmic toys in this collection are under £20, so theyíre perfect as gifts or as little treats for yourself. Perfect for couples on a budget. O kit contÈm um estimulante vibrador massageador multi-velocidade com 4 capas de silicone com textura intercambi·veis.</p>
+      <p>
+        All of the orgasmic toys in this collection are under £20, so theyíre perfect as gifts or as little treats for yourself.
+        Perfect for couples on a budget. O kit contÈm um estimulante vibrador massageador multi-velocidade com 4 capas
+        de silicone com textura intercambi·veis.
+      </p>
     </div>
     <div id="filter_search_results">
-      <%= render :partial => "products_list" %>
+      <%= render :partial => "products_list", :layout => false %>
     </div>
   </div><!-- .product-list END -->
 </div><!-- .main-content END -->
