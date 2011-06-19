@@ -1,0 +1,72 @@
+<div class="main-content">
+  <%= render :partial => "product_left_panel", :layout => false %>
+  <div class="products-list">
+    <div class="list_description">
+      <h1>Detalhes <span>do produto</span></h1>
+    </div><!-- .list_description END -->
+    <div class="main_search article">
+      <span class="new_product">Novo !!</span>
+      <div class="product_image details"><img src="/assets/misc/products/full/1.gif" alt="" /></div>
+      <div class="product-info">
+        <span class="new_product">Novo !!</span>
+        <h5><%= @product.name %></h5>
+        <p><%= @product.description %></p>
+      </div><!-- .product-info END -->
+    </div><!-- .main_search.article END -->
+    <div class="main_search product-price">
+      <h5>Seu pedido</h5>
+      <h3><%= @product.name %></h3>
+      <ul class="horz">
+        <li>Preço do produto</li>
+        <li class="total-article">
+          <div class="symbol">R$</div>
+          <%= price_format(@product) %>
+        </li>
+        <li>
+          <fieldset>
+            <div id="field_reference">
+              <%= label_tag :reference, "Referencia" %>
+              <%= select_tag :reference, options_for_select(@product.color.split(',')), {:class => "selectbox medium colors"} %>
+            </div>
+          </fieldset>
+        </li>
+        <li>
+          <fieldset class="medium">
+            <%= label_tag :quantity, "Cantidade" %>
+            <%= select_tag :reference, options_for_select(1..10) %>
+          </fieldset>
+        </li>
+      </ul>
+      <div class="price">
+        <dl>
+          <dt>
+            <span>Preço do <br/>Seu pedido</span>
+          </dt>
+          <dd class="symbol">R$</dd>
+        </dl>
+        <div class="square">
+          <%= price_format(@product) %>
+        </div><!-- .square END -->
+      </div><!-- .price END -->
+      <a href="#" class="btn black">Comprar</a>
+    </div><!-- .main_serach.product-price END -->
+    <a href="#" class="go_back">Volver al listado <span>[-]</span></a>
+  </div><!-- .main_search END -->
+  <ul class="article-list">
+    <li>
+      <h5>Quiet Vibrators</h5>
+      <p>This neon pink-tipped bullet vibrator is the RO100mm , an incredible orgasmic clitoral vibrator to follow up the world-famous RO-80mm vibe. Itís 2cms longer than the RO80mm which makes it a bit easier to handle, but the most important difference is the tip. Itís made from soft, supple silicone, so you can apply its powerful vibrations comfortably and firmly wherever you want.</p>
+    </li>
+    <li>
+      <h5>Quiet Vibrators</h5>
+      <p>This neon pink-tipped bullet vibrator is the RO100mm , an incredible orgasmic clitoral vibrator to follow up the world-famous RO-80mm vibe. Itís 2cms longer than the RO80mm which makes it a bit easier to handle, but the most important difference is the tip. Itís made from soft, supple silicone, so you can apply its powerful vibrations comfortably and firmly wherever you want.</p>
+    </li>
+    <li><a href="#" class="go_back">Volver al listado <span>[-]</span></a></li>
+  </ul>
+</div> <!-- .main-content END -->
+
+<% content_for :javascript do %>
+  <%= javascript_include_tag "selectbox.skin" %>
+  <%= javascript_include_tag "selectSkin" %>
+  <%= javascript_include_tag "select-color" %>
+<% end %>
