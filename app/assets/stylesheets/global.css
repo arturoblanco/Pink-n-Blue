@@ -91,7 +91,8 @@ p{
 
 .pagination a:hover,
 .pagination .page:hover,
-a{
+a,
+input[type="submit"]{
 	color:#DE318F;
 	cursor:pointer;
 	text-decoration:none;
@@ -247,8 +248,8 @@ nav ul a:hover{
 .regular{padding-top: 8px;}
 input.regular-text.text{
 	border: 1px solid #00B9FF;
-	margin: 8px 0;
-	width:272px;
+  margin: 8px 2px;
+  width: 268px;
 }
 .square .article-price{
   color: #7B7B7B;
@@ -306,6 +307,12 @@ input.regular-text.text{
   display:block;
   font-weight:bold;
   margin-bottom:10px;
+}
+.items .text.large p{text-transform:uppercase;}
+.items .text.large label,
+.items .text.small label{
+	position: relative;
+	top: -8px;
 }
 .main_search.carts{
 	overflow:hidden;
@@ -516,7 +523,7 @@ input.regular-text.text{
   color: #000;
 	display: block;
   font-weight: bold;
-	margin-bottom:5px;
+	margin: 8px 2px;
 }
 .products{
   float:left;
@@ -740,8 +747,8 @@ input.text{
   height:30px;
   padding: 0 6px;
 }
-input.text.small{width:74px;}
-input.text.large{width:330px;}
+.text.small{width:74px;}
+.text.large{width:330px;}
 .search-content{
   margin: 10px 0;  
   overflow: hidden;
