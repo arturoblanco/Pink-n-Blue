@@ -130,7 +130,8 @@ header #logo{
   display: block;
   float: left;
   height: 102px;
-  width: 160px;
+  margin-top: -8px;
+	width: 160px;
 }
 header .content-right{
   float: right;
@@ -138,7 +139,10 @@ header .content-right{
 }
 /* Navigation
 ---------------------------------------- */
-header nav{overflow:hidden;}
+header nav{
+  margin-top: 10px;
+  overflow:hidden;
+}
 header nav ul{
   border-top:1px solid #434343;
   float:right;
@@ -241,6 +245,11 @@ nav ul a:hover{
   width:70px;
 }
 .regular{padding-top: 8px;}
+.regular-text input{
+	border: 1px solid #00B9FF;
+	margin: 8px 0;
+	width:272px;
+}
 .square .article-price{
   color: #7B7B7B;
   font-size: 28px;
@@ -302,7 +311,8 @@ nav ul a:hover{
 }   
 .items .select{margin-top:-10px;}
 .main_search .price{float:right;}
-.main_search .price dl{width:190px;}
+.main_search .price dl{width:285px;}
+.main_search .price.small dl{width:190px;}
 
 /* Home
 ---------------------------------------- */
@@ -500,12 +510,12 @@ nav ul a:hover{
 .main_search.women-image h5{
 	margin:15px 0 25px;
 }
-.main_search.women-image label span {
-  display: block;
+.main_search.women-image label{
+  color: #000;
+	display: block;
   font-weight: bold;
 	margin-bottom:5px;
 }
-
 .products{
   float:left;
   width:307px;
@@ -566,6 +576,7 @@ nav ul a:hover{
   padding: 0 9px 17px;
   width: 300px;
 }
+.product-price fieldset.small{width:132px;}
 .main_search h3{
 	color:#DE318F;
 	font-size:14px;
@@ -580,7 +591,10 @@ nav ul a:hover{
 	width:150px;
 }
 .product-price li:nth-child(2n){text-align:right;}
-.product-price .btn.black{float:right;}
+.product-price .btn.black{
+	float:right;
+	margin-right: 15px;
+}
 /*.product-price li:nth-child(1n){
 	float:left;
 }
@@ -713,19 +727,20 @@ footer .textarea{
 
 /* Forms
 ============================================================ */
-.items input.text{
+input.text{
 	-moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;
  -moz-box-shadow: 2px 2px  7px rgba(185,185,185,0.4) inset, -2px -2px 7px rgba(185,185,185,0.4) inset;
  -webkit-box-shadow: 2px 2px  7px rgba(185,185,185,0.4) inset, -2px -2px 7px rgba(185,185,185,0.4) inset ;
  box-shadow: 2px 2px  7px rgba(185,185,185,0.4) inset, -2px -2px 7px rgba(185,185,185,0.4)inset;
  background-color:#FFF;
+ color: #666;
  height:30px;
  padding: 0 6px;
 }
 input.text.small{width:74px;}
 input.text.large{width:330px;}
 .search-content{
-  margin: 9px 0;  
+  margin: 10px 0;  
   overflow: hidden;
 }
 .search_form{
@@ -867,7 +882,7 @@ select option:hover{
 	margin: -22px 7px 0 0;
 }
 .selectbox_wrapper.medium .select_options{width:130px;}
-.selectbox_wrapper.medium .select_options li{width:120px;}
+.selectbox_wrapper.medium .select_options li{width:105px;}
 .selectbox_wrapper.colors .select_options li span{
   border: 1px solid #C3C3C3;
   display: block;

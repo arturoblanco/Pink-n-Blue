@@ -113,16 +113,15 @@ div.cmf-skinned-select select.colors option{
 .small div.cmf-skinned-select {
 	background: url("/assets/misc/select-small.gif") no-repeat 0px 100%;
 	height:10px!important;
-	width:90px!important;
+	width:83px!important;
 }
 .small div.cmf-skinned-select .select-text{
 	width:100px;
 }
 .small div.cmf-skinned-select select{
-	width:75px;
+  margin-right: 5px;
+  width: 84px;
 }
-
-
 div.cmf-skinned-select .select-text
 
 /* non javascript version select */
