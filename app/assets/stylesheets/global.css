@@ -103,7 +103,8 @@ a:hover,
 button:hover, 
 li:hover,
 input:focus,
-option:hover{
+option:hover,
+input[type="submit"]{
   -moz-transition: all 0.3s ease-out;  /* FF4+ */
   -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
   -webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
