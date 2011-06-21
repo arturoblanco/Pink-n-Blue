@@ -66,7 +66,5 @@
 </div> <!-- .main-content END -->
 
 <% content_for :javascript do %>
-  <%= javascript_include_tag "selectbox.skin" %>
-  <%= javascript_include_tag "selectSkin" %>
-  <%= javascript_include_tag "select-color" %>
+  <%= javascript_include_tag "selectbox.skin", "selectSkin", "select-color" %>
 <% end %>

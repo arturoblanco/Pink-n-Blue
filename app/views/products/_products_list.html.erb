@@ -1,29 +1,27 @@
 <div class="pagination" id="result_count">
   <%= render :partial => "shared/pagination/pagination_info", :locals => { :object_title => "Produtos", :collection => @products} %>
 </div>
-<ul class="list" class="horz">
-  <div class="autopagerize_page_element">
-    <% @products.each do |product| %>
-      <li>
-        <div class="product_image">
-          <img src="/assets/misc/products/thumbs/1.gif" alt="" />
-        </div>
-        <div class="product-info">
-          <span class="new_product">Novo !!</span>
-          <h3> <%= link_to product.description, product_path(product) %> </h3>
-          <div class="product_price"><%= product.price_for_sale %></div>
-          <ul class="product_colors horz">
-            <% product.color.split(",").each do |p_color| %>
-              <li class="product_color_<%=p_color%>"><%= p_color.capitalize %></li>
-            <% end %>
-          </ul>
-          <a class="btn black" href="javascript:void(0);">Comprar</a>
-        </div>
-      </li>
-    <% end %>
-  </div>
-</ul>
+<ul class="list clear horz">
+  <% @products.each do |product| %>
+    <li class="item">
+      <div class="product_image">
+        <img src="/assets/misc/products/thumbs/1.gif" alt="" />
+      </div><!-- .item END -->
+      <div class="product-info">
+        <span class="new_product">Novo !!</span>
+        <h3> <%= link_to product.description, product_path(product) %> </h3>
+        <div class="product_price"><%= product.price_for_sale %></div>
+        <ul class="product_colors horz">
+          <% product.color.split(",").each do |p_color| %>
+            <li class="product_color_<%=p_color%>"><%= p_color.capitalize %></li>
+          <% end %>
+        </ul><!-- .product_colors.horz END -->
+        <a class="btn black" href="javascript:void(0);">Comprar</a>
+      </div><!-- .product-info END -->
+    </li><!-- .item END -->
+  <% end %>
+</ul><!-- .list.clear.horz -->
 <div class="pagination pagination-list">
   <%= render :partial => "shared/pagination/pagination_info", :locals => { :object_title => "Produtos", :collection => @products} %>
   <%= paginate @products %>
-</div>
+</div><!-- .pagination.pagination-list -->

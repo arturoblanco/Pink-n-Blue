@@ -1,5 +1,6 @@
-<span>
-  <%= object_title.capitalize %>
-  <strong><%= "#{collection.offset_value + 1} a #{collection.last_page? ? collection.total_count : collection.offset_value + collection.limit_value}" %></strong>
+<p>
+  <%=h object_title.capitalize %>
+  <strong><%= "#{content_tag :span, pagination_from(collection)} a #{content_tag :span, pagination_to(collection)}".html_safe %></strong>
   de <%= collection.total_count %>
-</span>
+</p>
+

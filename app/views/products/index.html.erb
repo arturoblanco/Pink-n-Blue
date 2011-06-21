@@ -9,16 +9,14 @@
         de silicone com textura intercambi·veis.
       </p>
     </div>
-    <div id="filter_search_results">
+    <div class="product-list" id="filter_search_results">
       <%= render :partial => "products_list", :layout => false %>
     </div>
   </div><!-- .product-list END -->
 </div><!-- .main-content END -->
 
 <% content_for :javascript do %>
-  <%= javascript_include_tag "selectbox.skin" %>
-  <%= javascript_include_tag "selectSkin" %>
-  <%= javascript_include_tag "filterSearch" %>
+  <%= javascript_include_tag "selectbox.skin", "selectSkin", "filterSearch" %>
 <% end %>
 
 
