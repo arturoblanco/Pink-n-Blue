@@ -16,17 +16,17 @@ gem "unicorn", "~> 3.6.2"
 gem "squeel"
 gem "meta_search"
 gem "friendly_id"
+gem "sass-rails", ">=3.1.0.rc.2"
 
 
 group :test, :development do
-  gem 'mysql2'
+  gem "mysql2"
   gem "rspec-rails", "~> 2.6"
-  gem 'factory_girl_rails'
+  gem "factory_girl_rails"
 end
 
 group :production do
-  gem 'sass'
-  gem 'coffee-script'
+  gem "coffee-script"
   gem "pg"
   gem "therubyracer-heroku"
 end
