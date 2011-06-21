@@ -284,10 +284,6 @@ input.regular-text.text{
 /*Cart's Shopping
 ---------------------------------------- */
 .items a{margin-top:10px;}
-.items .clearfix{
-	position: relative;
-  top: 7px;
-}
 .items .image{
 	border: 1px solid #DBDBDB;
   display:inline-block;
@@ -298,32 +294,39 @@ input.regular-text.text{
 .items fieldset,
 .items a{
 	display:inline-block;
-	margin-right:6px;
+	margin-right:16px;
 	position: relative;
   top: -14px;
 }
 .items fieldset{width:20px;}
-.items label{
+.items .title{
   color:#000;
   display:block;
   font-weight:bold;
   margin-bottom:10px;
 }
 .items .text.large p{text-transform:uppercase;}
-.items .text.large label,
-.items .text.small label{
-	position: relative;
-	top: -8px;
-}
 .main_search.carts{
 	overflow:hidden;
 	padding:16px 25px;
-}   
+}  
+.main_search.carts .description{float:left;}
+.main_search.carts .description p{width:300px;}
+.main_search.carts .description h5{margin-bottom:20px;}
+.main_search.carts .floatright li:first-child{
+	color:#000;
+	font-weight:bold;
+}
+.main_search.carts .floatright li{margin-bottom:15px;}
 .items .select{margin-top:-10px;}
 .main_search .price{float:right;}
 .main_search .price dl{width:285px;}
-.main_search .price.small dl{width:190px;}
-
+.main_search .price.small{margin-bottom:7px;}
+.main_search .price.small dl{width:200px;}
+.main_search .price.small dd{
+	margin: 7px 0 0 40px;
+ 	width: 77px;
+}
 /* Home
 ---------------------------------------- */
 .instructions{
@@ -574,10 +577,24 @@ input.regular-text.text{
 	font-weight:normal;
 	text-transform: capitalize;
 }
+.items{margin-bottom:21px;}
 .article-list li,
 .items li{
 	border-bottom:1px solid #B4B4B4;
 	padding: 8px 0;
+}
+.items li{    
+	height: 73px;
+  padding-top: 11px;
+}
+.items li .horz li{    
+	border-bottom:0 none;
+	margin-right: 19px;
+}
+.items li .horz li:last-Child{
+	margin: 35px 2px 0;
+	padding-left: 0;
+	width: 94px;
 }
 .article-list li:last-Child{padding: 32px 0;}
 .article-list p{color:#7b7b7b;}
@@ -749,7 +766,7 @@ input.text{
   padding: 0 6px;
 }
 .text.small{width:74px;}
-.text.large{width:330px;}
+.text.large{width:310px;}
 .search-content{
   margin: 10px 0;  
   overflow: hidden;
