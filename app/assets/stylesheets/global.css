@@ -256,8 +256,9 @@ input.regular-text.text{
   color: #7B7B7B;
   font-size: 28px;
   line-height:25px;
-  margin: 0;
-  text-align: center;
+	margin: 3px 0px 0px 0px;  
+	text-align: center;
+	width:102px;
 }
 .article-price {
   float: left;
@@ -652,7 +653,7 @@ input.regular-text.text{
 }
 .product-price .btn.black{
 	float:right;
-	margin-right: 15px;
+	margin-right:5px;
 }
 /*.product-price li:nth-child(1n){
 	float:left;
