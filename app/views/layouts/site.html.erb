@@ -15,20 +15,19 @@
   <!--[if lte IE 7 ]> <body class="ie8 ie7"> <![endif]-->
     <!--[if IE 8 ]> <body class="ie8"> <![endif]-->
       <!--[if (gte IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
-
         <header id="header">
           <div class="wrapper">
             <h1 id="logo">
               <%= link_to image_tag("/assets/misc/header_logo.png"), root_path, :alt => "pink-n-blue logo" %>
             </h1>
             <div class="search-content">
-              <form action="" method="post" class="search_form">
+              <form action="/" method="post" class="search_form">
                 <div class="search">
-                  <input type="text" maxlength="255" class="text" placeholder="search...">
+                  <input type="text" maxlength="255" placeholder="search...">
                   <button class="submit_search" type="submit">pesquisa</button>
                 </div>
               </form>
-            </div>
+            </div><!-- .search-content END -->
             <%= render :partial => "shared/menues/site_menu" %>
           </div><!-- .wrapper END -->
         </header>
