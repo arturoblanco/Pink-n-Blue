@@ -248,9 +248,9 @@ nav ul a:hover{
 }
 .regular{padding-top: 8px;}
 input.regular-text.text{
-	border: 1px solid #00B9FF;
-  margin: 8px 2px;
-  width: 268px;
+	border:1px solid #00B9FF;
+  margin:8px 2px;
+  width:268px;
 }
 .square .article-price{
   color: #7B7B7B;
@@ -306,6 +306,7 @@ input.regular-text.text{
   margin-bottom:10px;
 }
 .items .text.large p{text-transform:uppercase;}
+.items .text.large p.title{text-transform:capitalize;}
 .main_search.carts{
 	overflow:hidden;
 	padding:16px 25px;
@@ -320,9 +321,18 @@ input.regular-text.text{
 .main_search.carts .floatright li{margin-bottom:15px;}
 .items .select{margin-top:-10px;}
 .main_search .price{float:right;}
-.main_search .price dl{width:285px;}
-.main_search .price.small{margin-bottom:7px;}
-.main_search .price.small dl{width:200px;}
+.main_search .price dl{
+	width: 292px;
+	margin-right: 7px;
+}
+.main_search .price.small{
+	margin-bottom: 7px;
+  width: 205px;
+}
+.main_search .price.small dl{
+	margin: 0 16px 0 1px;
+  width: 204px;
+}
 .main_search .price.small dd{
 	margin: 7px 0 0 40px;
  	width: 77px;
@@ -499,7 +509,7 @@ input.regular-text.text{
  	background-color:#FFF;
   border-bottom: 1px solid #B4B4B4;
   float: left;
-  margin: 0 15px 15px 0;
+  margin: 0 11px 15px 0;
   overflow: hidden;
   position: relative;
   width: 205px;
@@ -518,7 +528,13 @@ input.regular-text.text{
 .list_description p{margin-bottom:57px;}
 .main_search.women-image{
   background: url("/assets/misc/hot_search.jpg") no-repeat left top;
-	padding: 180px 14px 25px;
+	padding: 180px 11px 10px;
+}
+.main_search.women-image p{margin-bottom:15px;}
+.main_search.women-image .category form{overflow:hidden;}
+.main_search.women-image .btn{
+	float:right;
+	margin-top:8px;
 }
 .main_search.women-image h5{
 	margin:15px 0 25px;
@@ -589,10 +605,10 @@ input.regular-text.text{
 }
 .items li .horz li{    
 	border-bottom:0 none;
-	margin-right: 19px;
+	margin: 0 16px;
 }
 .items li .horz li:last-Child{
-	margin: 35px 2px 0;
+	margin:35px 0px 0px 0px;
 	padding-left: 0;
 	width: 94px;
 }
@@ -603,7 +619,14 @@ input.regular-text.text{
   padding: 0 9px 17px;
   width: 300px;
 }
+.product-price .price .square{right:10px;}
 .product-price fieldset.small{width:132px;}
+.product-price fieldset label{
+	font-weight: bold;
+	padding-bottom: 6px;
+	display: block;
+	}
+}
 .main_search h3{
 	color:#DE318F;
 	font-size:14px;
@@ -612,12 +635,21 @@ input.regular-text.text{
 	font-weight:normal;
 }
 .product-price .horz{overflow:visible;}
+.product-price .total-article .article-price{width:auto;}
 .product-price li:first-Child{line-height: 46px;}
 .product-price li:not(.total-article){
 	color:#000;
 	width:150px;
 }
-.product-price li:nth-child(2n){text-align:right;}
+.product-price li:nth-child(2n){
+	text-align: left;
+	padding-left: 46px;
+}
+.product-price li:last-child{
+	margin-right: 0.3px;
+	width: 85px;
+	padding-left: 54px;
+}
 .product-price .btn.black{
 	float:right;
 	margin-right: 15px;
