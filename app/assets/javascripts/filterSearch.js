@@ -18,9 +18,9 @@ var filterSearch = ( function  () {
     $(paginationLinks).live('click', function  (event) {
       $.ajax({
         type: "GET",
-        url: this.href,
-        success: function(html) {
-          $(filterSearchResults).html(html.data);
+      url: this.href,
+        success: function(xhrResponse) {
+          $(filterSearchResults).html(xhrResponse.obj_response);
         },
         error: function  () {
         }
@@ -65,8 +65,8 @@ var filterSearch = ( function  () {
       type: "GET",
       url: window.location.pathname,
       data: $.param(searchParams),
-      success: function  (html) {
-        $(filterSearchResults).html(html.data);
+      success: function  (xhrResponse) {
+        $(filterSearchResults).html(xhrResponse.obj_response);
       },
       error: function  () {
         alert("Error");
