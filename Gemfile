@@ -9,7 +9,7 @@ gem 'rails', '3.1.0.rc4'
 # Asset template engines
 gem 'uglifier'
 gem 'jquery-rails'
-gem "paperclip"
+#gem "paperclip"
 gem "simple_form"
 gem 'kaminari'
 gem "unicorn", "~> 3.6.2"
