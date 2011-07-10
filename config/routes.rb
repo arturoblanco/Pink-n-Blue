@@ -63,4 +63,6 @@ PinkNBlue::Application.routes.draw do
   # -------------- ROUTES FOR SITE -------------------------------------------------------------
   # -------------- ROUTES FOR PRODUCTS ---------------------------------------------------------
   resources :products, :only => [:index, :show]
+  # -------------- ROUTES FOR CARTS ------------------------------------------------------------
+  resources :carts, :only => [:show]
 end

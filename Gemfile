@@ -18,7 +18,6 @@ gem "meta_search"
 gem "friendly_id"
 gem "sass-rails", ">=3.1.0.rc.2"
 
-
 group :test, :development do
   gem "mysql2"
   gem "rspec-rails", "~> 2.6"
@@ -30,10 +29,6 @@ group :production do
   gem "pg"
   gem "therubyracer-heroku"
 end
-
-
-#Use unicorn as the web server
-# gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'

@@ -25,7 +25,7 @@
                 c.children().before('<div class="cmf-skinned-text">&nbsp;</div>').each(function() {
                     if (this.selectedIndex >= 0) $(this).prev().text(this.options[this.selectedIndex].innerHTML)
                 });
-                c.width(s.outerWidth());
+                c.width(s.outerWidth()-2);
                 c.height(s.outerHeight()-2);
 
                 // skin the container

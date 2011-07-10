@@ -1,0 +1,53 @@
+<div class="main-content">
+  <h1>Carrinho <span>de compras</span></h1>
+  <p>Nossa equipe está pronta para esclarecer suas dúvidas. Entre em contato e envie sugestões, críticas ou obtenha informações sobre a sua compra. Nosso atendimento valoriza qualidade, sigilo e dedicação. Preencha o formulário abaixo e aguarde o nosso contato.
+  </p>
+  <div class="main_search carts">
+    <h5>DETALHES DO PEDIDO</h5>
+    <h3>Seus comentários são importantes para nós</h3>
+    <ul class="items">
+      <li>
+        <ul class="horz">
+          <li><div class="image"><img alt="Selena Buckle And Zip Body In Stock" src="../assets/misc/products/colors/1/pink.gif"></div></li>
+          <li class="text large"><p class="title">Nome</p><p>Selena Buckle And Zip Body In Stock</p></li>
+          <li class="clearfix">
+            <p class="title">Ref.</p>
+            <select id="reference" name="reference" class="selectbox mini colors">
+              <option value="pink">rosa</option>
+            </select>
+          </li>
+          <li class="text"><p class="title">Preco</p><p><span>R$</span> 34.00</p></li>
+          <li class="clearfix">
+            <p class="title">Montate</p>
+            <select id="">
+              <option>1</option>
+            </select>
+          </li>
+          <li class="text"><p class="title">Preço Total</p><p><span>R$</span> 34.00</p></li>
+          <li><a href="#" class="btn black">Excluir</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="floatright">
+      <div class="price small">
+        <dl>
+          <dt>Seu pedido <span>R$</span></dt>
+          <dd class="article-price">750<span>.25</span></dd>
+        </dl>
+      </div><!-- .price END -->
+      <ul>
+        <li>Pagar com</li>
+        <li><a id="pag-seguro"href="javascript:void(0);"><img src="/assets/misc/payment_PagSeguro.gif" alt="Pag Seguro"/></a></li>
+        <li><a id="mercado-pago"href="javascript:void(0);"><img src="/assets/misc/payment_MercadoPago.gif" alt="Mercado pago"/></a></li>
+      </ul>
+    </div>
+    <div class="description">
+      <h5>Envios</h5>
+      <p>O kit contém um estimulante vibrador massageador multi-velocidade com 4 capas de silicone</p>
+    </div>
+  </div>
+</div><!-- .main-content END -->
+
+<% content_for :javascript do %>
+  <%= javascript_include_tag "selectbox.skin", "selectSkin", "select-color" %>
+<% end %>

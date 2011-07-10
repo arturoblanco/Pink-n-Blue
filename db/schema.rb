@@ -10,11 +10,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110619175320) do
+ActiveRecord::Schema.define(:version => 20110710203952) do
 
   create_table "articles", :force => true do |t|
     t.integer  "product_id"
     t.integer  "subcategory_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cart_products", :force => true do |t|
+    t.integer  "cart_id"
+    t.integer  "product_id"
+    t.float    "price_for_sale"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "quantity"
+  end
+
+  create_table "carts", :force => true do |t|
+    t.datetime "checkout_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -61,6 +76,6 @@ ActiveRecord::Schema.define(:version => 20110619175320) do
   end
 
   add_index "subcategories", ["id"], :name => "index_subcategories_on_id", :unique => true
-  add_index "subcategories", ["name"], :name => "index_subcategories_on_name", :unique => true
+  add_index "subcategories", ["name"], :name => "index_subcategories_on_name"
 
 end

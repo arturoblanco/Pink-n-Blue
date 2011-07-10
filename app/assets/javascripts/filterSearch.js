@@ -4,42 +4,41 @@ var filterSearch = ( function  () {
   var filterSearchBtn = "#filter_search_btn";
   var filterSearchResults = "#filter_search_results";
   var paginationLinks = "#filter_search_results div.pagination nav.pagination a"
+  var searchParams = new Object();
   var inputTextFields = undefined;
   var selectTextFields = undefined;
+  var ajaxResponse = undefined;
 
-
-  /* BEGIN DOCUMET READY */
+  /* 
+  * BEGIN DOCUMET READY 
+  */
   $(document).ready(function  () {
-    /* Finding elements of the filter search form */
-    inputTextFields = $(filterSearchForm).find("input:text");
-    selectTextFields = $(filterSearchForm).find("select");
+    loadFilterFields();
 
-    /* Preventing default request of links pagination */
     $(paginationLinks).live('click', function  (event) {
-      $.ajax({
-        type: "GET",
-      url: this.href,
-        success: function(xhrResponse) {
-          $(filterSearchResults).html(xhrResponse.obj_response);
-        },
-        error: function  () {
-        }
-      });
+      ajaxSearchRequest(this.href, filterSearchResponse)
       event.preventDefault();
     });
 
-    /* Adding event to the sbtn search of the form */
     $(filterSearchBtn).click(function  () {
       instanceParamsVariables();
     });
-
   });
+  /*
+  * END OF DOCUMENT READY
+  */
+  
+  /* Finding elements of the filter search form */
+  var loadFilterFields = function  () {
+    inputTextFields = $(filterSearchForm).find("input:text");
+    selectTextFields = $(filterSearchForm).find("select");
+  }
 
   var instanceParamsVariables = function  () {
-    searchParams = new Object();
+    searchParams = {};
     inputTextVariables();
     selectFieldsVariables();
-    ajaxSearchRequest();
+    ajaxSearchRequest(window.location.pathname, filterSearchResponse);
   }
 
   var inputTextVariables = function  () {
@@ -60,19 +59,28 @@ var filterSearch = ( function  () {
     });
   }
 
-  var ajaxSearchRequest = function  (paramsPage) {
+  var ajaxSearchRequest = function  (urlFilter, fnResponse) {
     $.ajax({
       type: "GET",
-      url: window.location.pathname,
+      url: urlFilter,
       data: $.param(searchParams),
-      success: function  (xhrResponse) {
-        $(filterSearchResults).html(xhrResponse.obj_response);
-      },
-      error: function  () {
+      success: fnResponse,
+      error: function  (jqXHR, textStatus, errorThrown) {
+        console.log(jqXHR, textStatus, errorThrown);
         alert("Error");
       }
     });
   }
-  /* END DOCUMENT READY */
+  
+  /*
+  * FUNCTIONS FOR RESPONSE OF THE AJAX REQUEST 
+  */
+  var filterSearchResponse = function  (xhrResponse) {
+    $(filterSearchResults).html(xhrResponse.obj_response);
+  }
+  /*
+  * END OF FUNCTIONS FOR RESPONSE OF THE AJAX REQUEST
+  */
+  
   return filterSearch;
-})();
+  })();
