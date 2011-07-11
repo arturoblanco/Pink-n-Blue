@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110710203952) do
+ActiveRecord::Schema.define(:version => 20110711001801) do
 
   create_table "articles", :force => true do |t|
     t.integer  "product_id"
@@ -43,6 +43,17 @@ ActiveRecord::Schema.define(:version => 20110710203952) do
   add_index "categories", ["id"], :name => "index_categories_on_id", :unique => true
   add_index "categories", ["name"], :name => "index_categories_on_name", :unique => true
 
+  create_table "category_subcategories", :force => true do |t|
+    t.integer  "category_id"
+    t.integer  "subcategory_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "category_subcategories", ["category_id"], :name => "index_category_subcategories_on_category_id"
+  add_index "category_subcategories", ["id"], :name => "index_category_subcategories_on_id", :unique => true
+  add_index "category_subcategories", ["subcategory_id"], :name => "index_category_subcategories_on_subcategory_id"
+
   create_table "products", :force => true do |t|
     t.string   "name"
     t.text     "description"
@@ -70,12 +81,11 @@ ActiveRecord::Schema.define(:version => 20110710203952) do
 
   create_table "subcategories", :force => true do |t|
     t.string   "name"
-    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "subcategories", ["id"], :name => "index_subcategories_on_id", :unique => true
-  add_index "subcategories", ["name"], :name => "index_subcategories_on_name"
+  add_index "subcategories", ["name"], :name => "index_subcategories_on_name", :unique => true
 
 end

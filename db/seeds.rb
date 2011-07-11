@@ -6,9 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# CREATING CATEGORIES AND SUBCATEGORIES
+#CLEANIN UP MODELS
 Category.destroy_all
 Subcategory.destroy_all
+Product.destroy_all
+Article.destroy_all
+caegorySubcategory.destroy_all
+
+
+# CREATING CATEGORIES AND SUBCATEGORIES
 categories = [
   {:name => "Category 1"},
   {:name => "Category 2"},
@@ -24,18 +30,11 @@ subcategories = [
   {:name => "Subcategory 3"}
 ]
 categories.each do |category|
-  new_category = Category.new(category)
-  new_category.save
-  subcategories.each do |subcategory|
-    new_subcategory = new_category.subcategories.new(subcategory)
-    new_subcategory.save
-  end
 end
 
+
 #CREATING PRODUCTS
-Product.destroy_all
-Article.destroy_all
-products = [
+roducts = [
   {:name => "Product 1", :description => "Description for product 1", :price_for_sale => 12, :color => "red,gree,blue"},
   {:name => "Product 2", :description => "Description for product 2", :price_for_sale => 12, :color => "red,gree,blue"},
   {:name => "Product 3", :description => "Description for product 3", :price_for_sale => 12, :color => "red,gree,blue"},

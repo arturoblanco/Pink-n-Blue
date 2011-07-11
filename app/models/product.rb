@@ -2,6 +2,7 @@ class Product < ActiveRecord::Base
   # ASSOCIATIONS
   has_many :articles
   has_many :subcategories, :through => :articles
+  has_many :categories, :through => :subcategories
 
   # VALIDATIONS
   validates :name, :uniqueness => true
@@ -11,7 +12,7 @@ class Product < ActiveRecord::Base
   
   # FILTER METHODS
   def self.get_products_filtered(product_name, subcategory_name, page=1, order='asc')
-    joins{subcategories.category}
+    joins{categories}
     .where{(products.name =~ "%#{product_name.to_s}%") & (categories.name =~ "%#{subcategory_name.to_s}%")}
     .order{products.name.send(order.to_sym)}
     .page(page).per(10)
