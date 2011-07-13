@@ -34,7 +34,11 @@ end
 #CREATING PRODUCTS
 products = [
   {:name => "Product 1", :description => "Description for product 1", :price_for_sale => 12, :color => "red,green,blue"},
-  {:name => "Product 2", :description => "Description for product 2", :price_for_sale => 12, :color => "red,green,blue"}
+  {:name => "Product 2", :description => "Description for product 2", :price_for_sale => 12, :color => "red,green,blue"},
+  {:name => "Product 3", :description => "Description for product 3", :price_for_sale => 12, :color => "red,green,blue"},
+  {:name => "Product 4", :description => "Description for product 4", :price_for_sale => 12, :color => "red,green,blue"},
+  {:name => "Product 5", :description => "Description for product 5", :price_for_sale => 12, :color => "red,green,blue"},
+  {:name => "Product 6", :description => "Description for product 6", :price_for_sale => 12, :color => "red,green,blue"}
 ]                                                                                                               
 products.each do |product|
   new_product = Product.new(product)

@@ -1,7 +1,8 @@
-<%p collection%>
 <p>
   <%=h object_title.capitalize %>
-  <strong><%= "#{content_tag :span, pagination_from(collection)} a #{content_tag :span, pagination_to(collection)}".html_safe %></strong>
-  de <%= collection.size %>
+  <strong>
+    <%= "#{content_tag :span, pagination_from(obj_collection)} a #{content_tag :span, pagination_to(obj_collection)}".html_safe %>
+  </strong>
+  de
+  <%= obj_collection.total_count %>
 </p>
-

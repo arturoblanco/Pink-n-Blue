@@ -14,7 +14,6 @@ gem "simple_form"
 gem 'kaminari'
 gem "unicorn", "~> 3.6.2"
 gem "squeel"
-gem "meta_search"
 gem "friendly_id"
 gem "sass-rails", ">=3.1.0.rc.2"
 

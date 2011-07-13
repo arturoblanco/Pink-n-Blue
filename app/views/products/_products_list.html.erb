@@ -1,5 +1,5 @@
 <div class="pagination" id="result_count">
-  <%= render :partial => "shared/pagination/pagination_info", :locals => { :object_title => "Produtos", :collection => @products} %>
+  <%= render :partial => "shared/pagination/pagination_info", :locals => {:object_title => "Produtos", :obj_collection => @products} %>
 </div>
 <ul class="list clear horz">
   <% @products.each do |product| %>
@@ -22,6 +22,6 @@
   <% end %>
 </ul><!-- .list.clear.horz -->
 <div class="pagination pagination-list">
-  <%= render :partial => "shared/pagination/pagination_info", :locals => { :object_title => "Produtos", :collection => @products} %>
+  <%= render :partial => "shared/pagination/pagination_info", :locals => { :object_title => "Produtos", :obj_collection => @products} %>
   <%= paginate @products %>
 </div><!-- .pagination.pagination-list -->
