@@ -5,13 +5,13 @@
       <li class="step-number"><%= current_cart.total_products %></li>
       <li class="step-link"><a href="javascript:void(0);">articles</a></li>
       <li class="step-link"><a href="javascript:void(0);">limpar carrinho</a></li>
-      <li class="step-link"><%= link_to "ver carrinho", cart_path(session[:cart_id]) %></li>
+      <li class="step-link"><%= link_to "ver carrinho", cart_path(current_cart.id) %></li>
     </ul>
   </div><!-- .steps END -->
   <div class="price">
     <dl>
       <dt>Seu pedido <span>R$</span></dt>
-      <%= price_format(current_cart, "total_shopp", tag1=:dd)%>
+      <%= price_format(current_cart, "total_shopp", :dd)%>
     </dl>
     <%= link_to "Pay", "javascript:void(0);", :class => "square" %>
   </div><!-- .price END -->

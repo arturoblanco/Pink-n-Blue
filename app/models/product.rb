@@ -1,6 +1,7 @@
 class Product < ActiveRecord::Base
   # ASSOCIATIONS
   has_many :articles
+  has_many :cart_products
   has_many :subcategories, :through => :articles
   has_many :categories, :through => :subcategories
 

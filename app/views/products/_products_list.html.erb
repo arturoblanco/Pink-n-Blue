@@ -16,7 +16,11 @@
             <li class="product_color_<%=p_color%>"><%= p_color.capitalize %></li>
           <% end %>
         </ul><!-- .product_colors.horz END -->
-        <a class="btn black" href="javascript:void(0);">Comprar</a>
+        <%= simple_form_for :product do |cart_p| %>
+          <%= cart_p.hidden_field :product_id %>
+          <%= cart_p.submit "Comprar", :class => "btn black" %>
+        <% end %>
+        
       </div><!-- .product-info END -->
     </li><!-- .item END -->
   <% end %>
