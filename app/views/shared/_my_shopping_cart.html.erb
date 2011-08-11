@@ -5,7 +5,7 @@
       <li class="step-number"><%= current_cart.total_products %></li>
       <li class="step-link"><a href="javascript:void(0);">articles</a></li>
       <li class="step-link"><a href="javascript:void(0);">limpar carrinho</a></li>
-      <li class="step-link"><%= link_to "ver carrinho", cart_path(current_cart) %></li>
+      <li class="step-link"><%= link_to "ver carrinho", cart_path(session[:cart_id]) %></li>
     </ul>
   </div><!-- .steps END -->
   <div class="price">

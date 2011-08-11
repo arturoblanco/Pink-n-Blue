@@ -15,7 +15,6 @@ class Product < ActiveRecord::Base
     select{distinct(id)}.joins{categories.outer}
     .where{(products.name =~ "%#{product_name.to_s}%") & (categories.name =~ "%#{subcategory_name.to_s}%")}
     .select{([name, description, price_for_sale, discount, color, created_at, updated_at])}
-    .order{name.send(order.to_sym)}
     .page(page).per(20)
   end
   

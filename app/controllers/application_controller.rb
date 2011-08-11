@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
 
   def current_cart
     @current_cart ||= Cart.first || Cart.create!
+    session[:cart_id] = @current_cart.id
+    @current_cart
   end
 
 end
