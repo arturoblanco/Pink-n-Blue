@@ -10,7 +10,7 @@ class Product < ActiveRecord::Base
 
   # FRIENDLY ID
   has_friendly_id :name, :use_slug => true
-  
+
   # FILTER METHODS
   def self.get_products_filtered(product_name, subcategory_name, page=1, order='asc')
     select{distinct(id)}.joins{categories.outer}
@@ -18,5 +18,5 @@ class Product < ActiveRecord::Base
     .select{([name, description, price_for_sale, discount, color, created_at, updated_at])}
     .page(page).per(20)
   end
-  
+
 end

@@ -12,4 +12,8 @@ class CartProduct < ActiveRecord::Base
     self.quantity ||= 1
   end
 
+  def total_price
+    quantity * price_for_sale
+  end
+
 end

@@ -8,23 +8,38 @@
     <ul class="items">
       <li>
         <ul class="horz">
-          <li><div class="image"><img alt="Selena Buckle And Zip Body In Stock" src="../assets/misc/products/colors/1/pink.gif"></div></li>
-          <li class="text large"><p class="title">Nome</p><p>Selena Buckle And Zip Body In Stock</p></li>
+          <li>
+            <div class="image">
+              <%= image_tag "misc/products/colors/1/pink.gif", :alt => "Product Name" %>
+            </div>
+          </li>
+          <li class="text large">
+            <p class="title">Nome</p>
+            <p>Selena Buckle And Zip Body In Stock</p>
+          </li>
           <li class="clearfix">
             <p class="title">Ref.</p>
             <select id="reference" name="reference" class="selectbox mini colors">
               <option value="pink">rosa</option>
             </select>
           </li>
-          <li class="text"><p class="title">Preco</p><p><span>R$</span> 34.00</p></li>
+          <li class="text">
+            <p class="title">Preco</p>
+            <p><span>R$</span>34.00</p>
+          </li>
           <li class="clearfix">
             <p class="title">Montate</p>
             <select id="">
               <option>1</option>
             </select>
           </li>
-          <li class="text"><p class="title">Preço Total</p><p><span>R$</span> 34.00</p></li>
-          <li><a href="#" class="btn black">Excluir</a></li>
+          <li class="text">
+            <p class="title">Preço Total</p>
+            <p><span>R$</span>34.00</p>
+          </li>
+          <li>
+            <%= link_to "Excluir", "javascript:void(0);", :class => "btn black" %>
+          </li>
         </ul>
       </li>
     </ul>
@@ -37,8 +52,12 @@
       </div><!-- .price END -->
       <ul>
         <li>Pagar com</li>
-        <li><a id="pag-seguro"href="javascript:void(0);"><img src="/assets/misc/payment_PagSeguro.gif" alt="Pag Seguro"/></a></li>
-        <li><a id="mercado-pago"href="javascript:void(0);"><img src="/assets/misc/payment_MercadoPago.gif" alt="Mercado pago"/></a></li>
+        <li>
+          <a id="pag-seguro"href="javascript:void(0);"><img src="/assets/misc/payment_PagSeguro.gif" alt="Pag Seguro"/></a>
+        </li>
+        <li>
+          <a id="mercado-pago"href="javascript:void(0);"><img src="/assets/misc/payment_MercadoPago.gif" alt="Mercado pago"/></a>
+        </li>
       </ul>
     </div>
     <div class="description">

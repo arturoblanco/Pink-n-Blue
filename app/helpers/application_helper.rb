@@ -25,7 +25,7 @@ module ApplicationHelper
   # AND RETUNRS THE TOTAL OF DISPLAYED ITMEMS IN
   # THE PAGINATION.
   def pagination_to(collection)
-    collection.offset_value + collection.limit_value
+    collection.last_page? ? collection.total_count : collection.offset_value + collection.limit_value
   end
 
 end
