@@ -16,7 +16,7 @@
             <li class="product_color_<%=p_color%>"><%= p_color.capitalize %></li>
           <% end %>
         </ul><!-- .product_colors.horz END -->
-        <%= simple_form_for product.cart_products.build do |cart_p| %>
+        <%= simple_form_for product.cart_products.build, :html => {:class => "cart_form", :onsubmit => "return false;"} do |cart_p| %>
           <%= cart_p.hidden_field :product_id %>
           <%= cart_p.submit "Add to Cart", :class => "btn black" %>
         <% end %>

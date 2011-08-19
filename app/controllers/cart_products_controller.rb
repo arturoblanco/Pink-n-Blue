@@ -1,9 +1,12 @@
 class CartProductsController < ApplicationController
   def create
-    current_cart.cart_products.create!(params[:cart_product])
-    flash[:notice] = "Product added to cart"
-    session[:last_product_page] = request.env['HTTP_REFERER'] || products_url
-    redirect_to session[:last_product_page]
+    @shopping_cart = current_cart.cart_products.new(params[:cart_product])
+    if @shopping_cart.save 
+      @response = {:status => "success", :cart_info => current_cart.cart_info}
+    else
+      @response = {:status => "error", :message => "The product could not be added."}
+    end
+    render :json => @response
   end
   
   def destroy

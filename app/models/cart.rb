@@ -3,7 +3,11 @@ class Cart < ActiveRecord::Base
   has_many :cart_products
   has_many :products, :through => :cart_products
 
-  # METHODS
+  # INSTANCE METHODS
+  def cart_info
+    {:total_products => total_products, :total_shopp => total_shopp}
+  end
+  
   def total_products
     self.cart_products.count
   end

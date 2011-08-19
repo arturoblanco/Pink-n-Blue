@@ -2,7 +2,7 @@
   <div class="steps">
     <h3>seu carrinho de compras</h3>
     <ul class="horz">
-      <li class="step-number"><%= current_cart.total_products %></li>
+      <li class="step-number" id="num_of_prods"><%= current_cart.total_products %></li>
       <li class="step-link"><a href="javascript:void(0);">articles</a></li>
       <li class="step-link">
         <%= link_to "limpiar carrinho", cart_path(current_cart.id), :confirm => "Are you sure you want to clean your shopping cart", :method => :delete %>
