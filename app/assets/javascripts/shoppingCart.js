@@ -4,11 +4,18 @@ var shoppingCart = (function  () {
   var urlShopp = "/cart_products";
   var totalProducts = "#num_of_prods";
   var totalShopp = "dd.article-price";
+  var productColor = "a.sel_prod_color"
   
   $(document).ready(function  () {
     $(shoppForm).find("[type=submit]").click(function  () {
-      shoppingCartForm = $(this).parent(shoppForm);
+      var shoppingCartForm = $(this).parent(shoppForm);
       sendShoppForm(shoppingCartForm)
+    });
+    
+    $(productColor).click(function  () {
+      colorSelected = $(this);
+      setSelectedColor(colorSelected);
+      setProductColor(colorSelected);
     })
   });
   /* 
@@ -23,6 +30,18 @@ var shoppingCart = (function  () {
     cartInfo = jsonResponse.cart_info;
     $(totalProducts).text(cartInfo.total_products);
     $(totalShopp).html(formatTotalShopp(cartInfo.total_shopp));
+  }
+  
+  var setSelectedColor = function  (colorSelected) {
+    var colorList = colorSelected.parents("ul.product_colors");
+    $(colorList).children().removeClass("color_selected");
+    colorSelected.parent().addClass("color_selected");
+  }
+  
+  var setProductColor = function  (colorSelected) {
+    var productForm = colorSelected.parents("ul.product_colors").next("form");
+    var color = colorSelected.text().toLowerCase();
+    $(productForm).find("input:hidden.selected_color").val(color);
   }
   
   var ajaxRequest = function  (form, url, method, successFunction) {

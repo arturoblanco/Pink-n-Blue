@@ -562,6 +562,7 @@ input.regular-text.text{
 	margin-bottom:13px;
 	font-size:1.2em;
 }
+.products-list .product_colors a{display: block;}
 .product-info .btn{margin: 0 39px;}	
 .products-list h1 span{font-weight:normal;}
 .products-list h1{margin-bottom:18px;}
@@ -681,22 +682,25 @@ input.regular-text.text{
   margin:0 1px 0 0;
   text-indent:-9999px;
 }
-.product_color_pink {
+.product_colors li.color_selected{
+  border: 1px solid black;
+}
+.product_colors li.product_color_pink {
   background-color: #D41F62;
 }
-.product_color_green {
+.product_colors li.product_color_green {
   background-color: #89D414;
 }
-.product_color_yellow {
+.product_colors li.product_color_yellow {
   background-color: #D4AE14;
 }
-.product_color_blue {
+.product_colors li.product_color_blue {
   background-color: #3D14D1;
 }
-.product_color_white {
+.product_colors li.product_color_white {
   background-color: #FFF;
 }
-.product_color_black {
+.product_colors li.product_color_black {
   background-color: #000;
 }
 

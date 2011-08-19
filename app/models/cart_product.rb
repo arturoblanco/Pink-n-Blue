@@ -6,6 +6,7 @@ class CartProduct < ActiveRecord::Base
   # CALLBACKS
   before_create :default_quantity_to_one
   before_create :set_product_price
+  #before_create :set_default_color
   
   def total_price
     quantity * price_for_sale
@@ -19,6 +20,10 @@ class CartProduct < ActiveRecord::Base
   
   def set_product_price
     self.price_for_sale = product.price_for_sale
+  end
+  
+  def set_default_color
+    self.color = product.color.split(",").first
   end
 
 end
