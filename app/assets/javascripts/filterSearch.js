@@ -38,7 +38,8 @@ var filterSearch = ( function  () {
     searchParams = {};
     inputTextVariables();
     selectFieldsVariables();
-    ajaxSearchRequest(window.location.pathname, filterSearchResponse);
+    urlRequest = window.location.pathname.match(/\/\w+/)[0];
+    ajaxSearchRequest(urlRequest, filterSearchResponse);
   }
 
   var inputTextVariables = function  () {

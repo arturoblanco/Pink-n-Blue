@@ -1,18 +1,17 @@
 var shoppingCart = (function  () {
   var shoppingCart = {};
   var shoppForm = "form.cart_form";
-  var urlShopp = "/cart_products";
   var totalProducts = "#num_of_prods";
   var totalShopp = "dd.article-price";
   var productColor = "a.sel_prod_color"
   
   $(document).ready(function  () {
-    $(shoppForm).find("[type=submit]").click(function  () {
+    $(shoppForm).find("[type=submit]").live("click", function  () {
       var shoppingCartForm = $(this).parent(shoppForm);
       sendShoppForm(shoppingCartForm)
     });
     
-    $(productColor).click(function  () {
+    $(productColor).live("click", function  () {
       colorSelected = $(this);
       setSelectedColor(colorSelected);
       setProductColor(colorSelected);
@@ -23,7 +22,7 @@ var shoppingCart = (function  () {
   */
   
   var sendShoppForm = function  (shoppForm) {
-    ajaxRequest(shoppForm, urlShopp, "POST", successShoppForm )
+    ajaxRequest(shoppForm, "/cart_products", "POST", successShoppForm )
   }
   
   var successShoppForm = function  (jsonResponse) {
