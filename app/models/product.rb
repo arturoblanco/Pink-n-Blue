@@ -10,6 +10,11 @@ class Product < ActiveRecord::Base
 
   # FRIENDLY ID
   has_friendly_id :name, :use_slug => true
+  
+  # INSTANCE METHODS
+  def get_colors
+    color.split(",")
+  end
 
   # FILTER METHODS
   def self.get_products_filtered(product_name, subcategory_name, page=1, order='asc')

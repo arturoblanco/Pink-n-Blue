@@ -13,6 +13,7 @@
       <% current_cart.cart_products.each do |cart_product|%>
       <li>
         <ul class="horz">
+          <%= simple_form_for cart_product do |form| %>
           <li>
             <div class="image">
               <%= image_tag "misc/products/colors/1/pink.gif", :alt => "Product Name" %>
@@ -23,10 +24,8 @@
             <p><%= cart_product.product.name %></p>
           </li>
           <li class="clearfix">
-            <p class="title">Ref.</p>
-            <select id="reference" name="reference" class="selectbox mini colors">
-              <option value="pink">rosa</option>
-            </select>
+            <p class="title">Color</p>
+            <%= form.input :color, :collection => cart_product.product.get_colors, :input_html => {:class => "selectbox mini colors"}, :label => false, :include_blank => false %>
           </li>
           <li class="text">
             <p class="title">Preco</p>
@@ -34,9 +33,7 @@
           </li>
           <li class="clearfix">
             <p class="title">Montate</p>
-            <select>
-              <option>1</option>
-            </select>
+            <%= form.input :quantity, :collection => 1..10, :label => false, :include_blank => false %>
           </li>
           <li class="text">
             <p class="title">Preço Total</p>
@@ -45,7 +42,8 @@
           <li>
             <%= link_to "Excluir", cart_product_path(cart_product.id), :confirm => 'Are you sure you want to delete this product?', :method => :delete, :class => "btn black"  %>
           </li>
-        </ul>
+          <% end %>
+        </ul><!-- .horz END -->
       </li>
       <% end %>
 

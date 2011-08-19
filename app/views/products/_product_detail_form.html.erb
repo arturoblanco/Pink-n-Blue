@@ -1,0 +1,29 @@
+<h5>Product Detail</h5>
+<h3><%= @product.name %></h3>
+<%= simple_form_for @product.cart_products.build, :html => {:onsubmit => "return false;", :class => "cart_form"} do |form| %>
+  <%= form.input :product_id, :as => :hidden %>
+  <ul class="horz">
+    <li><strong>Preço do produto</strong></li>
+    <li class="total-article">
+      <div class="symbol">R$</div><%= price_format(@product) %>
+    </li>
+    <li>
+      <fieldset>
+        <%= form.input :color, :collection => @product.get_colors, :include_blank => false %>
+      </fieldset>
+    </li>
+    <li>
+      <fieldset class="small">
+        <%= form.input :quantity, :collection => 1..10, :include_blank => false %>
+      </fieldset>
+    </li>
+  </ul><!-- .horz END -->
+  <div class="price">
+    <dl>
+      <dt><span>Preço do <br/>Articulo(s)</span></dt>
+      <dd class="symbol">R$</dd>
+    </dl>
+    <div class="square"><%= price_format(@product) %></div>
+  </div><!-- .price END -->
+  <%= form.submit "Add to Cart", :class => "btn black" %>
+<% end %>

@@ -41,6 +41,7 @@ var shoppingCart = (function  () {
   var setProductColor = function  (colorSelected) {
     var productForm = colorSelected.parents("ul.product_colors").next("form");
     var color = colorSelected.text().toLowerCase();
+    console.log($(productForm).find("input:hidden.selected_color"));
     $(productForm).find("input:hidden.selected_color").val(color);
   }
   

@@ -16,55 +16,21 @@
       </div><!-- .product-info END -->
     </div><!-- .main_search.article END -->
     <div class="main_search product-price">
-      <h5>Product Detail</h5>
-      <h3><%= @product.name %></h3>
-      <ul class="horz">
-        <li><strong>Preço do produto</strong></li>
-        <li class="total-article">
-          <div class="symbol">R$</div>
-          <%= price_format(@product) %>
-        </li>
-        <li>
-          <fieldset>
-            <div id="field_reference">
-              <%= label_tag :reference, "Referencia" %>
-              <%= select_tag :reference, options_for_select(@product.color.split(',')), {:class => "selectbox medium colors"} %>
-            </div>
-          </fieldset>
-        </li>
-        <li>
-          <fieldset class="small">
-            <%= label_tag :quantity, "Cantidade" %>
-            <%= select_tag :reference, options_for_select(1..10) %>
-          </fieldset>
-        </li>
-      </ul>
-      <div class="price">
-        <dl>
-          <dt>
-            <span>Preço do <br/>Articulo(s)</span>
-          </dt>
-          <dd class="symbol">R$</dd>
-        </dl>
-        <div class="square">
-          <%= price_format(@product) %>
-        </div><!-- .square END -->
-      </div><!-- .price END -->
-      <%= link_to "Add to Cart", "javascript:void(0);", :class => "btn black" %>
+      <%= render :partial => "product_detail_form", :layout => false %>
     </div><!-- .main_serach.product-price END -->
     <%= link_to "Volver al listado [-]", products_path, :class => "go_back" %>
   </div><!-- .main_search END -->
   <ul class="article-list">
     <li>
       <h5>Quiet Vibrators</h5>
-      <p>This neon pink-tipped bullet vibrator is the RO100mm , an incredible orgasmic clitoral vibrator to follow up the world-famous RO-80mm vibe. Itís 2cms longer than the RO80mm which makes it a bit easier to handle, but the most important difference is the tip. Itís made from soft, supple silicone, so you can apply its powerful vibrations comfortably and firmly wherever you want.</p>
-    </li>
-    <li>
-      <h5>Quiet Vibrators</h5>
-      <p>This neon pink-tipped bullet vibrator is the RO100mm , an incredible orgasmic clitoral vibrator to follow up the world-famous RO-80mm vibe. Itís 2cms longer than the RO80mm which makes it a bit easier to handle, but the most important difference is the tip. Itís made from soft, supple silicone, so you can apply its powerful vibrations comfortably and firmly wherever you want.</p>
+      <p>
+        This neon pink-tipped bullet vibrator is the RO100mm , an incredible orgasmic clitoral vibrator to follow up the world-famous RO-80mm vibe. 
+        Itís 2cms longer than the RO80mm which makes it a bit easier to handle, but the most important difference is the tip. Itís made from soft, 
+        supple silicone, so you can apply its powerful vibrations comfortably and firmly wherever you want.
+      </p>
     </li>
     <%= link_to "Volver al listado [-]", products_path, :class => "go_back" %>
-  </ul>
+  </ul><!-- .article-list END -->
 </div> <!-- .main-content END -->
 
-<% javascript "siteJavascript", "filterSearch", "msDropDown" %>
+<% javascript "siteJavascript", "filterSearch", "msDropDown", "shoppingCart" %>

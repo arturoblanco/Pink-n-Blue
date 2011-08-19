@@ -29,7 +29,7 @@ SimpleForm.setup do |config|
   # config.error_notification_id = nil
 
   # You can wrap all inputs in a pre-defined tag.
-  # config.wrapper_tag = :div
+  config.wrapper_tag = nil
 
   # CSS class to add to all wrapper tags.
   # config.wrapper_class = :input
@@ -56,7 +56,7 @@ SimpleForm.setup do |config|
   # config.label_class = nil
 
   # You can define the class to use on all forms. Default is simple_form.
-  # config.form_class = :simple_form
+  config.form_class = nil
 
   # Whether attributes are required by default (or not). Default is true.
   # config.required_by_default = true
