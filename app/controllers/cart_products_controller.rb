@@ -2,7 +2,7 @@ class CartProductsController < ApplicationController
   def create
     @shopping_cart = current_cart.cart_products.new(params[:cart_product])
     if @shopping_cart.save 
-      @response = {:status => "success", :cart_info => current_cart.cart_info}
+      @response = {:status => "success", :cart_info => current_cart.cart_info, :message => "The product was added successfully."}
     else
       @response = {:status => "error", :message => "The product could not be added."}
     end
