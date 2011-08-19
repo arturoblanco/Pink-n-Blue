@@ -21,11 +21,28 @@ module ApplicationHelper
     collection.offset_value + 1
   end
 
-  # THIS METHODS RECEIVES A COLLECTION OF ACTIVE RECORD
+  # THIS METHOD RECEIVES A COLLECTION OF ACTIVE RECORD
   # AND RETUNRS THE TOTAL OF DISPLAYED ITMEMS IN
   # THE PAGINATION.
   def pagination_to(collection)
     collection.last_page? ? collection.total_count : collection.offset_value + collection.limit_value
+  end
+
+  # THIS METHOD SET THE PAGE TITLE
+  def title(page_title, show_title = true)
+    content_for(:title) { h(page_title.to_s) }
+    @show_title = show_title
+  end
+
+  # THIS METHODS INCLUDES STYLESHEETS INTO THE 
+  # DOCUMENT
+  def stylesheet(*args)
+    content_for(:head) { stylesheet_link_tag(*args) }
+  end
+
+  #THIS METHOD INCLUDES JAVASCRIPTS FILES
+  def javascript(*args)
+    content_for(:javascript) { javascript_include_tag(*args) }
   end
 
 end

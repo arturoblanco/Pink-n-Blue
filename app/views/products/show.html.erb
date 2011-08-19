@@ -65,6 +65,4 @@
   </ul>
 </div> <!-- .main-content END -->
 
-<% content_for :javascript do %>
-  <%= javascript_include_tag "siteJavascript", "filterSearch", "msDropDown" %>
-<% end %>
+<% javascript "siteJavascript", "filterSearch", "msDropDown" %>

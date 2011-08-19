@@ -8,7 +8,9 @@
         <img src="/assets/misc/products/thumbs/1.gif" alt="" />
       </div><!-- .item END -->
       <div class="product-info">
+        <% if (product.created_at + 2.weeks) >= Time.now %>
         <span class="new_product">Novo !!</span>
+        <% end %>
         <h3> <%= link_to product.description, product_path(product) %> </h3>
         <div class="product_price"><%= product.price_for_sale %></div>
         <ul class="product_colors horz">
@@ -16,7 +18,7 @@
             <li class="product_color_<%=p_color%>"><%= p_color.capitalize %></li>
           <% end %>
         </ul><!-- .product_colors.horz END -->
-        <%= simple_form_for :product do |cart_p| %>
+        <%= simple_form_for product.cart_products.build do |cart_p| %>
           <%= cart_p.hidden_field :product_id %>
           <%= cart_p.submit "Comprar", :class => "btn black" %>
         <% end %>

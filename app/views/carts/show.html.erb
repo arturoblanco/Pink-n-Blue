@@ -1,11 +1,15 @@
 <div class="main-content">
   <h1>Carrinho <span>de compras</span></h1>
-  <p>Nossa equipe está pronta para esclarecer suas dúvidas. Entre em contato e envie sugestões, críticas ou obtenha informações sobre a sua compra. Nosso atendimento valoriza qualidade, sigilo e dedicação. Preencha o formulário abaixo e aguarde o nosso contato.
+  <p>
+    Nossa equipe está pronta para esclarecer suas dúvidas. Entre em contato e envie sugestões,
+    críticas ou obtenha informações sobre a sua compra. Nosso atendimento valoriza qualidade,
+    sigilo e dedicação. Preencha o formulário abaixo e aguarde o nosso contato.
   </p>
   <div class="main_search carts">
     <h5>DETALHES DO PEDIDO</h5>
     <h3>Seus comentários são importantes para nós</h3>
     <ul class="items">
+      <% current_cart.cart_products.each do |cart_product|%>
       <li>
         <ul class="horz">
           <li>
@@ -15,7 +19,7 @@
           </li>
           <li class="text large">
             <p class="title">Nome</p>
-            <p>Selena Buckle And Zip Body In Stock</p>
+            <p><%= cart_product.product.name %></p>
           </li>
           <li class="clearfix">
             <p class="title">Ref.</p>
@@ -25,38 +29,40 @@
           </li>
           <li class="text">
             <p class="title">Preco</p>
-            <p><span>R$</span>34.00</p>
+            <p><span>R$</span><%= cart_product.price_for_sale %></p>
           </li>
           <li class="clearfix">
             <p class="title">Montate</p>
-            <select id="">
+            <select>
               <option>1</option>
             </select>
           </li>
           <li class="text">
             <p class="title">Preço Total</p>
-            <p><span>R$</span>34.00</p>
+            <p><span>R$</span><%= cart_product.total_price %></p>
           </li>
           <li>
-            <%= link_to "Excluir", "javascript:void(0);", :class => "btn black" %>
+            <%= link_to "Excluir", cart_product_path(cart_product.id), :confirm => 'Are you sure you want to delete this product?', :method => :delete, :class => "btn black"  %>
           </li>
         </ul>
       </li>
+      <% end %>
+
     </ul>
     <div class="floatright">
       <div class="price small">
         <dl>
           <dt>Seu pedido <span>R$</span></dt>
-          <dd class="article-price">750<span>.25</span></dd>
+          <%= price_format(current_cart, "total_shopp", :dd) %>
         </dl>
       </div><!-- .price END -->
       <ul>
         <li>Pagar com</li>
         <li>
-          <a id="pag-seguro"href="javascript:void(0);"><img src="/assets/misc/payment_PagSeguro.gif" alt="Pag Seguro"/></a>
+          <a id="pag-seguro" href="javascript:void(0);"><img src="/assets/misc/payment_PagSeguro.gif" alt="Pag Seguro"/></a>
         </li>
         <li>
-          <a id="mercado-pago"href="javascript:void(0);"><img src="/assets/misc/payment_MercadoPago.gif" alt="Mercado pago"/></a>
+          <a id="mercado-pago" href="javascript:void(0);"><img src="/assets/misc/payment_MercadoPago.gif" alt="Mercado pago"/></a>
         </li>
       </ul>
     </div>
@@ -67,6 +73,4 @@
   </div>
 </div><!-- .main-content END -->
 
-<% content_for :javascript do %>
-  <%= javascript_include_tag "siteJavascript", "msDropDown" %>
-<% end %>
+<% javascript "siteJavascript", "msDropDown" %>
