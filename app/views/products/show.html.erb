@@ -1,3 +1,4 @@
+<% title "Product"%>
 <div class="main-content">
   <%= render :partial => "product_left_panel", :layout => false %>
   <div class="products-list">
@@ -5,19 +6,20 @@
       <h1>Detalhes <span>do produto</span></h1>
     </div><!-- .list_description END -->
     <div class="main_search article">
-      <span class="new_product">Novo !!</span>
-      <div class="product_image details"><img src="/assets/misc/products/full/1.gif" alt="" /> </div>
+      <%= is_new?(@product) %>
+      <div class="product_image details">
+        <img src="/assets/misc/products/full/1.gif" alt="" />
+      </div>
       <div class="product-info">
-        <span class="new_product">Novo !!</span>
         <h5><%= @product.name %></h5>
         <p><%= @product.description %></p>
       </div><!-- .product-info END -->
     </div><!-- .main_search.article END -->
     <div class="main_search product-price">
-      <h5>Seu pedido</h5>
+      <h5>Product Detail</h5>
       <h3><%= @product.name %></h3>
       <ul class="horz">
-        <li>Preço do produto</li>
+        <li><strong>Preço do produto</strong></li>
         <li class="total-article">
           <div class="symbol">R$</div>
           <%= price_format(@product) %>
@@ -40,7 +42,7 @@
       <div class="price">
         <dl>
           <dt>
-            <span>Preço do <br/>Seu pedido</span>
+            <span>Preço do <br/>Articulo(s)</span>
           </dt>
           <dd class="symbol">R$</dd>
         </dl>
@@ -48,7 +50,7 @@
           <%= price_format(@product) %>
         </div><!-- .square END -->
       </div><!-- .price END -->
-      <%= link_to "Comprar", "javascript:void(0);", :class => "btn black" %>
+      <%= link_to "Add to Cart", "javascript:void(0);", :class => "btn black" %>
     </div><!-- .main_serach.product-price END -->
     <%= link_to "Volver al listado [-]", products_path, :class => "go_back" %>
   </div><!-- .main_search END -->

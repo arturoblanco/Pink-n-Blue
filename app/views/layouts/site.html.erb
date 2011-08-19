@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <!--[if IE]><![endif]-->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title><%= content_for?(:title) ? "Pink n Blue - #{yield(:title)}" : "Pink n Blue" %></title>
     <%= favicon_link_tag "favicon.png" %>
     <%= stylesheet_link_tag "global", "skinned-select", :media => "all" %>
   </head>
